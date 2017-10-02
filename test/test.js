@@ -15,3 +15,12 @@ LyngkTestCase1.prototype.testA=function(){
     }
     assertTrue(cpt==43);
 };
+
+LyngkTestCase1.prototype.testA=function(){
+    var c='A';
+    var l=3;
+    var s=c+l;
+    var c=new Lyngk.Coordinates(c,l);
+    console.log(s);
+    assertTrue(c.toString()==s);
+}
