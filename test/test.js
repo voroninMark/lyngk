@@ -16,8 +16,8 @@ LyngkTestCase1.prototype.testA=function(){
     assertTrue(cpt==43);
 };
 
-LyngkTestCase1.prototype.testA=function(){
-    var c='A';
+LyngkTestCase1.prototype.testB=function(){
+    var c='C';
     var l=3;
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
