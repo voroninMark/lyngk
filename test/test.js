@@ -22,7 +22,7 @@ LyngkTestCase1.prototype.testB=function(){
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
     assertTrue(c.toString()===s);
-}
+};
 
 LyngkTestCase1.prototype.testC=function() {
     // on test avec les coordonées que l'on sait faux
@@ -31,14 +31,14 @@ LyngkTestCase1.prototype.testC=function() {
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
     assertTrue(c.toString() === 'invalide');
-}
+};
 
 LyngkTestCase1.prototype.testD=function() {
     var c1=new Lyngk.Coordinates('B',3);
     var c2=c1.clone();
 
     assertTrue((c1.getLigne() === c2.getLigne()) && (c1.getColonne() === c2.getColonne()));
-}
+};
 
 LyngkTestCase1.prototype.testE=function() {
     var lettres='ABCDEFGHI';
@@ -67,7 +67,7 @@ LyngkTestCase1.prototype.testE=function() {
         }
     }
     assertTrue(res===0);
-}
+};
 
 LyngkTestCase1.prototype.testF=function() {
     var lettres='ABCDEFGHI';
@@ -85,5 +85,14 @@ LyngkTestCase1.prototype.testF=function() {
         }
     }
     assertTrue(cpt===0);
-}
+};
+
+LyngkTestCase1.prototype.testG=function() {
+    var engine=new Lyngk.Engine();
+    var coor=new Lyngk.Coordinates('A',3);
+    var inter=new Lyngk.Intersection(coor,'BLUE');
+    var piece=new Lyngk.Piece(coor,'BLUE');
+    engine.poser(inter,piece);
+    assertTrue(inter.getEtat()==1);
+};
 
