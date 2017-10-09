@@ -40,5 +40,31 @@ LyngkTestCase1.prototype.testD=function() {
     assertTrue((c1.getLigne() == c2.getLigne()) && (c1.getColonne()==c2.getColonne()));
 }
 
+LyngkTestCase1.prototype.testE=function() {
+    var lettres='ABCDEFGHI';
+    var res=0;
+    for(var i=0;i<9;i++){
+        for(var j=0;j<9;j++){
+
+            var c=new Lyngk.Coordinates(lettres[i],j+1);
+
+            if(c.isOk()) {
+                for (var k = 0; k < 9; k++) {
+                    for (var l = 0; l < 9; l++) {
+                        var cTest = new Lyngk.Coordinates(lettres[i], j + 1);
+                        if(cTest.hashage()==c.hashage()
+                            && cTest.getColonne()!=c.getColonne()
+                            && cTest.getLigne()!=c.getLigne()
+                        ){
+                            res++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    assertTrue(res==0);
+}
+
 
 
