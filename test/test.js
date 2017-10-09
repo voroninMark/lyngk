@@ -69,5 +69,21 @@ LyngkTestCase1.prototype.testE=function() {
     assertTrue(res===0);
 }
 
-
+LyngkTestCase1.prototype.testF=function() {
+    var lettres='ABCDEFGHI';
+    var cpt=0;
+    for(var i=1;i<=9;i++){
+        for(var j=1;j<=9;j++){
+            var c=new Lyngk.Coordinates(lettres[i-1],j);
+            if(c.isOk()){
+                var intersect=new Lyngk.Intersection(c);
+                if(intersect.getEtat()!==0){// toutes les intersections douvent avoir
+                                            // etat = 0 (vacant) par défaut
+                    cpt++;
+                }
+            }
+        }
+    }
+    assertTrue(cpt===0);
+}
 
