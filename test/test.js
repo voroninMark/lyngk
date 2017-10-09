@@ -1,7 +1,7 @@
 'use strict';
 
 var LyngkTestCase1 = TestCase("LyngkTestCase");
-
+/*
 LyngkTestCase1.prototype.testA=function(){
     var cpt=0;
     var lettres='ABCDEFGHI';
@@ -145,6 +145,7 @@ LyngkTestCase1.prototype.testHistoire11=function() {
     });
     assertTrue(cpt===0);
 };
+*/
 LyngkTestCase1.prototype.testHistoire12=function() {
     var engine=new Lyngk.Engine();
     var listeInter=engine.startGame();
@@ -154,24 +155,29 @@ LyngkTestCase1.prototype.testHistoire12=function() {
     var cptGreen=0;
     var cptWhite=0;
     var cptIvory=0;
-    checkColor=function(couleur,piece){
-        var cpt;
-        piece.foreach(function(elem){
-            if(elem.getCouleur() === couleur){
-                cpt++;
+
+    listeInter.forEach(function(elem){
+        elem.getListePiece().forEach(function(piece){
+            if(piece.getCouleur()===0){
+                cptBlack++;
+            }
+            if(piece.getCouleur()===1){
+                cptIvory++;
+            }
+            if(piece.getCouleur()===2){
+                cptBlue++;
+            }
+            if(piece.getCouleur()===3){
+                cptRed++;
+            }
+            if(piece.getCouleur()===4){
+                cptGreen++;
+            }
+            if(piece.getCouleur()===5){
+                cptWhite++;
             }
         });
-        return cpt;
-    };
-    listeInter.forEach(function(elem){
-        cptRed=checkColor(3,elem.getListePiece());
-        cptWhite=checkColor(5,elem.getListePiece());
-        cptGreen=checkColor(4,elem.getListePiece());
-        cptBlue=checkColor(2,elem.getListePiece());
-        cptBlack=checkColor(0,elem.getListePiece());
-        cptIvory=checkColor(1,elem.getListePiece());
     });
 
-
-    assertTrue((cptBlanc===3) && (cptBlack+cptGreen+cptRed+cptBlue+cptIvory === 5));
+    assertTrue((cptWhite===129) && cptBlack==43 && cptIvory==43 && cptBlue==43 && cptRed==43 && cptGreen==43);
 };

@@ -16,11 +16,24 @@ Lyngk.Engine = function () {
         if(inter.getListePiece().length>=5){
             inter.setEtat('FULL_STACK');
         }
-    }
-    this.starGame(){
-        var listeInter=[];
-
-
-        return listeInter;
-    }
-};this
+    };
+    this.startGame=function(){
+        var lettres='ABCDEFGHI';
+        var tabInter=[];
+        var tabPiece=[];
+        var listeColor=["BLACK","IVORY","BLUE","RED","GREEN","WHITE","WHITE","WHITE"];
+        for(var i=1;i<=9;i++){
+            for(var j=1;j<=9;j++){
+                var coor=new Lyngk.Coordinates(lettres[i-1],j);
+                if(coor.isOk()){
+                    tabInter.push(new Lyngk.Intersection(coor,'WHITE'));
+                    for(var k=0;k<listeColor.length;k++){
+                        tabPiece.push(new Lyngk.Piece(coor, listeColor[k]));
+                        this.poser(tabInter[tabInter.length - 1], tabPiece[tabPiece.length - 1]);
+                    }
+                }
+            }
+        }
+        return tabInter;
+    };
+};
