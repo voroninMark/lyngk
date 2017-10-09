@@ -96,7 +96,7 @@ LyngkTestCase1.prototype.testG=function() {
     assertTrue(inter.getEtat()===1);
 };
 
-LyngkTestCase1.prototype.testG=function() {
+LyngkTestCase1.prototype.testH=function() {
     var engine=new Lyngk.Engine();
     var coor=new Lyngk.Coordinates('A',3);
     var inter=new Lyngk.Intersection(coor,'BLUE');
@@ -105,5 +105,18 @@ LyngkTestCase1.prototype.testG=function() {
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceRed);
     assertTrue(inter.getEtat()===2);
+}
+LyngkTestCase1.prototype.testI=function() {
+    var engine=new Lyngk.Engine();
+    var coor=new Lyngk.Coordinates('A',3);
+    var inter=new Lyngk.Intersection(coor,'BLUE');
+    var pieceBlue=new Lyngk.Piece(coor,'BLUE');
+    var pieceRed=new Lyngk.Piece(coor,'RED');
+    engine.poser(inter,pieceBlue);
+    engine.poser(inter,pieceBlue);
+    engine.poser(inter,pieceBlue);
+    engine.poser(inter,pieceBlue);
+    engine.poser(inter,pieceRed);
+    assertTrue(inter.getEtat()===3);
 }
 
