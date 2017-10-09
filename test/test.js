@@ -43,19 +43,23 @@ LyngkTestCase1.prototype.testD=function() {
 LyngkTestCase1.prototype.testE=function() {
     var lettres='ABCDEFGHI';
     var res=0;
+    // boucle va chercher chaque coordonnée
     for(var i=0;i<9;i++){
         for(var j=0;j<9;j++){
 
             var c=new Lyngk.Coordinates(lettres[i],j+1);
 
             if(c.isOk()) {
+                // la boucle va comparer la coordonnée de la boucle précedente
+                // à toutes les autres
                 for (var k = 0; k < 9; k++) {
                     for (var l = 0; l < 9; l++) {
                         var cTest = new Lyngk.Coordinates(lettres[i], j + 1);
                         if(cTest.hashage()==c.hashage()
                             && cTest.getColonne()!=c.getColonne()
                             && cTest.getLigne()!=c.getLigne()
-                        ){
+                        ){// si la condition est vraie au moins une fois ; le hashage
+                            // n'est pas bon
                             res++;
                         }
                     }
