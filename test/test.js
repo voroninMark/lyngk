@@ -24,3 +24,12 @@ LyngkTestCase1.prototype.testB=function(){
     console.log(s);
     assertTrue(c.toString()==s);
 }
+
+LyngkTestCase1.prototype.testC=function() {
+    // on test avec les coordonées que l'on sait faux
+    var c='A';
+    var l=12;
+    var s=c+l;
+    var c=new Lyngk.Coordinates(c,l);
+    assertTrue(c.toString()=='invalide');
+}
