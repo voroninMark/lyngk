@@ -17,4 +17,5 @@ Lyngk.Engine = function () {
             inter.setEtat('FULL_STACK');
         }
     }
+
 };
