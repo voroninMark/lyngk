@@ -17,4 +17,10 @@ Lyngk.Engine = function () {
             inter.setEtat('FULL_STACK');
         }
     }
-};
+    this.starGame(){
+        var listeInter=[];
+
+
+        return listeInter;
+    }
+};this

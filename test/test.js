@@ -105,7 +105,7 @@ LyngkTestCase1.prototype.testH=function() {
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceRed);
     assertTrue(inter.getEtat()===2);
-}
+};
 LyngkTestCase1.prototype.testI=function() {
     var engine=new Lyngk.Engine();
     var coor=new Lyngk.Coordinates('A',3);
@@ -118,5 +118,60 @@ LyngkTestCase1.prototype.testI=function() {
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceRed);
     assertTrue(inter.getEtat()===3);
-}
+};
 
+LyngkTestCase1.prototype.testHistoire11=function() {
+    var cpt=0;
+    var lettres='ABCDEFGHI';
+    var engine=new Lyngk.Engine();
+    var tabInter=[];
+    var tabPiece=[];
+    var cpt=0;
+
+    for(var i=1;i<=9;i++){
+        for(var j=1;j<=9;j++){
+            var coor=new Lyngk.Coordinates(lettres[i-1],j);
+            if(coor.isOk()){
+                tabInter.push(new Lyngk.Intersection(coor,'BLUE'));
+                tabPiece.push(new Lyngk.Piece(coor,'BLUE'));
+                engine.poser(tabInter[tabInter.length-1],tabPiece[tabPiece.length-1]);
+            }
+        }
+    }
+    tabInter.forEach(function(elem){
+       if(elem.getEtat()!==1){
+           cpt++;
+       }
+    });
+    assertTrue(cpt===0);
+};
+LyngkTestCase1.prototype.testHistoire12=function() {
+    var engine=new Lyngk.Engine();
+    var listeInter=engine.startGame();
+    var cptRed=0;
+    var cptBlue=0;
+    var cptBlack=0;
+    var cptGreen=0;
+    var cptWhite=0;
+    var cptIvory=0;
+    checkColor=function(couleur,piece){
+        var cpt;
+        piece.foreach(function(elem){
+            if(elem.getCouleur() === couleur){
+                cpt++;
+            }
+        });
+        return cpt;
+    };
+    listeInter.forEach(function(elem){
+        cptRed=checkColor(3,elem.getListePiece());
+        cptWhite=checkColor(5,elem.getListePiece());
+        cptGreen=checkColor(4,elem.getListePiece());
+        cptBlue=checkColor(2,elem.getListePiece());
+        cptBlack=checkColor(0,elem.getListePiece());
+        cptIvory=checkColor(1,elem.getListePiece());
+    });
+
+
+    assertTrue((cptBlanc===3) && (cptBlack+cptGreen+cptRed+cptBlue+cptIvory === 5));
+};
