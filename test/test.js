@@ -13,7 +13,7 @@ LyngkTestCase1.prototype.testA=function(){
             }
         }
     }
-    assertTrue(cpt==43);
+    assertTrue(cpt===43);
 };
 
 LyngkTestCase1.prototype.testB=function(){
@@ -21,7 +21,7 @@ LyngkTestCase1.prototype.testB=function(){
     var l=3;
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
-    assertTrue(c.toString()==s);
+    assertTrue(c.toString()===s);
 }
 
 LyngkTestCase1.prototype.testC=function() {
@@ -30,14 +30,14 @@ LyngkTestCase1.prototype.testC=function() {
     var l=12;
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
-    assertTrue(c.toString()=='invalide');
+    assertTrue(c.toString() === 'invalide');
 }
 
 LyngkTestCase1.prototype.testD=function() {
     var c1=new Lyngk.Coordinates('B',3);
     var c2=c1.clone();
 
-    assertTrue((c1.getLigne() == c2.getLigne()) && (c1.getColonne()==c2.getColonne()));
+    assertTrue((c1.getLigne() === c2.getLigne()) && (c1.getColonne() === c2.getColonne()));
 }
 
 LyngkTestCase1.prototype.testE=function() {
@@ -48,16 +48,15 @@ LyngkTestCase1.prototype.testE=function() {
         for(var j=0;j<9;j++){
 
             var c=new Lyngk.Coordinates(lettres[i],j+1);
-
             if(c.isOk()) {
                 // la boucle va comparer la coordonnée de la boucle précedente
                 // à toutes les autres
                 for (var k = 0; k < 9; k++) {
                     for (var l = 0; l < 9; l++) {
                         var cTest = new Lyngk.Coordinates(lettres[i], j + 1);
-                        if(cTest.hashage()==c.hashage()
-                            && cTest.getColonne()!=c.getColonne()
-                            && cTest.getLigne()!=c.getLigne()
+                        if(cTest.hashage()===c.hashage()
+                            && cTest.getColonne()!==c.getColonne()
+                            && cTest.getLigne()!==c.getLigne()
                         ){// si la condition est vraie au moins une fois ; le hashage
                             // n'est pas bon
                             res++;
@@ -67,7 +66,7 @@ LyngkTestCase1.prototype.testE=function() {
             }
         }
     }
-    assertTrue(res==0);
+    assertTrue(res===0);
 }
 
 
