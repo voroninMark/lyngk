@@ -34,7 +34,7 @@ LyngkTestCase1.prototype.testC=function() {
 }
 
 LyngkTestCase1.prototype.testD=function() {
-    var c1=new Lyngk.Coordinates('A',3);
+    var c1=new Lyngk.Coordinates('B',3);
     var c2=c1.clone();
 
     assertTrue((c1.getLigne() == c2.getLigne()) && (c1.getColonne()==c2.getColonne()));
