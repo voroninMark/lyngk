@@ -13,5 +13,8 @@ Lyngk.Engine = function () {
         if(inter.getListePiece().length>1 && inter.getListePiece().length<5){
             inter.setEtat('STACK');
         }
+        if(inter.getListePiece().length>=5){
+            inter.setEtat('FULL_STACK');
+        }
     }
 };
