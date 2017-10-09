@@ -93,6 +93,6 @@ LyngkTestCase1.prototype.testG=function() {
     var inter=new Lyngk.Intersection(coor,'BLUE');
     var piece=new Lyngk.Piece(coor,'BLUE');
     engine.poser(inter,piece);
-    assertTrue(inter.getEtat()==1);
+    assertTrue(inter.getEtat()===1);
 };
 
