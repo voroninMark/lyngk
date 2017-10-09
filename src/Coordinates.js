@@ -19,8 +19,18 @@ Lyngk.Coordinates = function (c, l) {
         if(l>=tabOk[c][0] && l<=tabOk[c][1]){
             return true;
         }
+        return false;
     }
     this.toString=function(){
-        return c+l;
+        if(this.isOk())
+            return c+l;
+        else
+            return "invalide";
+    }
+    this.getLigne=function(){
+        return ligne;
+    }
+    this.getColonne=function(){
+        return colonne;
     }
 };

@@ -21,7 +21,6 @@ LyngkTestCase1.prototype.testB=function(){
     var l=3;
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
-    console.log(s);
     assertTrue(c.toString()==s);
 }
 
@@ -33,3 +32,13 @@ LyngkTestCase1.prototype.testC=function() {
     var c=new Lyngk.Coordinates(c,l);
     assertTrue(c.toString()=='invalide');
 }
+
+LyngkTestCase1.prototype.testD=function() {
+    var c1=new Lyngk.Coordinates('A',3);
+    var c2=c1.clone();
+
+    assertTrue((c1.getLigne() == c2.getLigne()) && (c1.getColonne()==c2.getColonne()));
+}
+
+
+
