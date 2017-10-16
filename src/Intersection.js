@@ -18,4 +18,7 @@ Lyngk.Intersection = function (c) {
     this.setListePiece=function(newPiece){
         listePiece.push(newPiece);
     };
+    this.getCouleur=function(){
+        return listePiece[listePiece.length - 1].getCouleur();
+    };
 };

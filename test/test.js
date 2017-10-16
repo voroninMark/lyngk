@@ -195,5 +195,17 @@ LyngkTestCase1.prototype.testHistoire13=function() {
         }
     });
     assertTrue(cptTest === 0);
+};
+
+LyngkTestCase1.prototype.testHistoire14=function() {
+    var engine=new Lyngk.Engine();
+    engine.startGame();
+    var listeInter=engine.getTabInter();
+    var rand=Math.floor(Math.random()*43);
+    var listePiece=listeInter[rand].getListePiece();
+    var couleurIntersection=listeInter[rand].getCouleur();
+    var couleurDernierePiece=listePiece[listePiece.length-1].getCouleur();
+
+    assertTrue(couleurIntersection===couleurDernierePiece);
 
 };
