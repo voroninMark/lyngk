@@ -21,4 +21,7 @@ Lyngk.Intersection = function (c) {
     this.getCouleur=function(){
         return listePiece[listePiece.length - 1].getCouleur();
     };
+    this.supprTopPiece=function(){
+        listePiece.pop();
+    };
 };

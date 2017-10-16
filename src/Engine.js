@@ -19,7 +19,12 @@ Lyngk.Engine = function () {
             inter.setEtat('FULL_STACK');
         }
     };
-
+    this.movePiece=function(origine,cible){
+        var listePieceOrigine=origine.getListePiece();
+        var pieceDuHaut=listePieceOrigine[listePieceOrigine.length-1];
+        cible.setListePiece(pieceDuHaut);
+        origine.supprTopPiece();
+    };
     this.startGame=function(){
         var lettres='ABCDEFGHI';
         var listeColor=["BLACK","IVORY","BLUE","RED","GREEN","WHITE"];
