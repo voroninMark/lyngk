@@ -8,7 +8,7 @@ Lyngk.Engine = function () {
     var tabInter=[];
 
     this.poser=function(inter,piece){
-        inter.setListePiece(piece);
+        inter.addPiece(piece);
         if(inter.getListePiece().length===1){
             inter.setEtat('ONE_PIECE');
         }
@@ -22,8 +22,14 @@ Lyngk.Engine = function () {
     this.movePiece=function(origine,cible){
         var listePieceOrigine=origine.getListePiece();
         var pieceDuHaut=listePieceOrigine[listePieceOrigine.length-1];
-        cible.setListePiece(pieceDuHaut);
+        cible.addPiece(pieceDuHaut);
         origine.supprTopPiece();
+    };
+    this.movePile=function(origine,cible){
+        var listePieceOrigine=origine.getListePiece();
+        var listePieceCible=cible.getListePiece();
+        cible.setListePiece(listePieceCible.concat(listePieceOrigine));
+        origine.cleanPile();
     };
     this.startGame=function(){
         var lettres='ABCDEFGHI';

@@ -15,13 +15,19 @@ Lyngk.Intersection = function (c) {
     this.getListePiece=function(){
         return listePiece;
     };
-    this.setListePiece=function(newPiece){
+    this.addPiece=function(newPiece){
         listePiece.push(newPiece);
+    };
+    this.setListePiece=function(newListe){
+        listePiece=newListe;
     };
     this.getCouleur=function(){
         return listePiece[listePiece.length - 1].getCouleur();
     };
     this.supprTopPiece=function(){
         listePiece.pop();
+    };
+    this.cleanPile=function(){
+        listePiece=[];
     };
 };

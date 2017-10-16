@@ -248,5 +248,5 @@ LyngkTestCase1.prototype.testHistoire16=function() {
     engine.movePile(inter1,inter2);
 
     var couleurInter2=inter2.getCouleur();
-    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0 && inter1.getListePiece().length === 3);
+    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0 && inter2.getListePiece().length === 3);
 };
