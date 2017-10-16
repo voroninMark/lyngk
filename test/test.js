@@ -201,11 +201,32 @@ LyngkTestCase1.prototype.testHistoire14=function() {
     var engine=new Lyngk.Engine();
     engine.startGame();
     var listeInter=engine.getTabInter();
+
     var rand=Math.floor(Math.random()*43);
     var listePiece=listeInter[rand].getListePiece();
     var couleurIntersection=listeInter[rand].getCouleur();
     var couleurDernierePiece=listePiece[listePiece.length-1].getCouleur();
 
     assertTrue(couleurIntersection===couleurDernierePiece);
+};
+
+LyngkTestCase1.prototype.testHistoire15=function() {
+    var engine=new Lyngk.Engine();
+
+    var coor1=new Lyngk.Coordinates('A',3);
+    var coor2=new Lyngk.Coordinates('B',3);
+
+    var inter1=new Lyngk.Intersection(coor1);
+    var inter2=new Lyngk.Intersection(coor2);
+
+    engine.poser(inter1,new Lyngk.Piece('WHITE'));
+    engine.poser(inter2,new Lyngk.Piece('BLACK'));
+    var couleurInter1=inter1.getCouleur();
+
+    engine.movePiece(inter1,inter2);
+
+    var couleurInter2=inter2.getCouleur();
+
+    assertTrue(couleurInter1===couleurInter2 && inter1.length === 0);
 
 };
