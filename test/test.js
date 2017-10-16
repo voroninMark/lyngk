@@ -1,7 +1,7 @@
 'use strict';
 
 var LyngkTestCase1 = TestCase("LyngkTestCase");
-/*
+
 LyngkTestCase1.prototype.testA=function(){
     var cpt=0;
     var lettres='ABCDEFGHI';
@@ -145,7 +145,7 @@ LyngkTestCase1.prototype.testHistoire11=function() {
     });
     assertTrue(cpt===0);
 };
-*/
+
 LyngkTestCase1.prototype.testHistoire12=function() {
     var engine=new Lyngk.Engine();
     var listeInter=engine.startGame();
