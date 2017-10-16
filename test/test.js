@@ -179,11 +179,21 @@ LyngkTestCase1.prototype.testHistoire12=function() {
             }
         });
     });
-    console.log(cptIvory + " " + cptBlue + " " + cptRed + " " +cptGreen+ " "+cptBlack+" "+cptWhite);
     assertTrue(cptWhite===3 && cptBlack===8 && cptIvory===8 && cptBlue===8 && cptRed===8 && cptGreen===8);
 };
-/*
+
 LyngkTestCase1.prototype.testHistoire13=function() {
+    var engine=new Lyngk.Engine();
+    engine.startGame();
+    var listeInter=engine.getTabInter();
+    var cptTest=0;
+
+    listeInter.forEach(function(elem){
+        var tempLength=elem.getListePiece().length;
+        if(tempLength!==1){
+            cptTest++;
+        }
+    });
+    assertTrue(cptTest === 0);
 
 };
-*/
