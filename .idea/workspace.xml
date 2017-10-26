@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.js" afterPath="$PROJECT_DIR$/src/Engine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Intersection.js" afterPath="$PROJECT_DIR$/src/Intersection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="307" column="2" lean-forward="true" selection-start-line="307" selection-start-column="2" selection-end-line="307" selection-end-column="2" />
+            <state relative-caret-position="485">
+              <caret line="350" column="51" lean-forward="false" selection-start-line="350" selection-start-column="51" selection-end-line="350" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -42,7 +39,7 @@
       <file leaf-file-name="Intersection.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Intersection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-185">
               <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
@@ -59,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Engine.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Engine.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Engine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="234">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +115,8 @@
         <option value="$PROJECT_DIR$/src/Coordinates.js" />
         <option value="$PROJECT_DIR$/src/Piece.js" />
         <option value="$PROJECT_DIR$/src/Intersection.js" />
-        <option value="$PROJECT_DIR$/src/Engine.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
+        <option value="$PROJECT_DIR$/src/Engine.js" />
       </list>
     </option>
   </component>
@@ -279,7 +276,7 @@
       <workItem from="1507553050181" duration="232000" />
       <workItem from="1508143946957" duration="10740000" />
       <workItem from="1509024906802" duration="1474000" />
-      <workItem from="1509026392990" duration="4312000" />
+      <workItem from="1509026392990" duration="8281000" />
     </task>
     <task id="LOCAL-00001" summary="2.1 test avec c=A et l=1">
       <created>1506940951224</created>
@@ -554,43 +551,57 @@
       <option name="project" value="LOCAL" />
       <updated>1509028611353</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Histoire 18 test success">
+      <created>1509031076982</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1509031076982</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Histoire 18 test fail , j'ai du mofifier le fonctionnement de mon engine et notament du movePile qui prenait en paramètre des intersections et maintenant prend en paramètre des coordonnées">
+      <created>1509035137531</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1509035137531</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2017.10.26 at 16h 56m 44s.xml">
+    <history-entry file="Tests - 2017.10.26 at 17h 55m 06s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 16h 57m 34s.xml">
+    <history-entry file="Tests - 2017.10.26 at 17h 55m 30s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 16h 59m 55s.xml">
+    <history-entry file="Tests - 2017.10.26 at 17h 56m 13s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 00m 35s.xml">
+    <history-entry file="Tests - 2017.10.26 at 17h 56m 34s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 01m 36s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 02m 35s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 08m 25s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 03m 34s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 08m 57s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 04m 09s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 10m 28s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 06m 39s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 13m 15s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 10m 31s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.10.26 at 17h 13m 57s.xml">
+    <history-entry file="Tests - 2017.10.26 at 18h 22m 49s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59719000" />
+    <option name="totallyTimeSpent" value="63688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="992" y="24" width="928" height="1056" extended-state="4" />
@@ -601,7 +612,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -647,8 +658,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histoire 2 commit test" />
-    <MESSAGE value="Histoire 4 test fail" />
     <MESSAGE value="Histoire 5 test fail" />
     <MESSAGE value="Histoire 5 test sucess" />
     <MESSAGE value="Histoire 6 test fail" />
@@ -672,7 +681,9 @@
     <MESSAGE value="Histoire 16 test success" />
     <MESSAGE value="Histoire 17 test success , je n'ai pas le test fail car j'ai oublié de push et j'avais deja codé la fonction qui manquait, j'ai aussi modifié le test 16 qui échouait a cause du 17" />
     <MESSAGE value="Histoire 18 test fail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histoire 18 test fail" />
+    <MESSAGE value="Histoire 18 test success" />
+    <MESSAGE value="Histoire 18 test fail , j'ai du mofifier le fonctionnement de mon engine et notament du movePile qui prenait en paramètre des intersections et maintenant prend en paramètre des coordonnées" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire 18 test fail , j'ai du mofifier le fonctionnement de mon engine et notament du movePile qui prenait en paramètre des intersections et maintenant prend en paramètre des coordonnées" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -813,24 +824,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Intersection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-185">
           <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="307" column="2" lean-forward="true" selection-start-line="307" selection-start-column="2" selection-end-line="307" selection-end-column="2" />
+        <state relative-caret-position="485">
+          <caret line="350" column="51" lean-forward="false" selection-start-line="350" selection-start-column="51" selection-end-line="350" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
