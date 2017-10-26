@@ -242,11 +242,39 @@ LyngkTestCase1.prototype.testHistoire16=function() {
     engine.poser(inter1,new Lyngk.Piece('WHITE'));
     engine.poser(inter1,new Lyngk.Piece('BLACK'));
     engine.poser(inter1,new Lyngk.Piece('RED'));
+    engine.poser(inter2,new Lyngk.Piece('RED'));
 
     var couleurInter1=inter1.getCouleur();
 
     engine.movePile(inter1,inter2);
 
     var couleurInter2=inter2.getCouleur();
-    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0 && inter2.getListePiece().length === 3);
+    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0 && inter2.getListePiece().length === 4);
+};
+
+LyngkTestCase1.prototype.testHistoire17=function() {
+    var engine=new Lyngk.Engine();
+
+    var coor1=new Lyngk.Coordinates('B',3);
+    var coor2=new Lyngk.Coordinates('B',2);
+
+    var inter1=new Lyngk.Intersection(coor1);
+    var inter2=new Lyngk.Intersection(coor2);
+
+    engine.poser(inter1,new Lyngk.Piece('WHITE'));
+    engine.poser(inter1,new Lyngk.Piece('BLACK'));
+    engine.poser(inter1,new Lyngk.Piece('RED'));
+    engine.poser(inter2,new Lyngk.Piece('RED'));
+
+    var etatInter1PremierMoveAvant = inter1.getEtat();
+    engine.movePile(inter1,inter2);
+    var etatInter1PremierMoveApres = inter1.getEtat();
+
+    var etatInter2DeuxiemeMoveAvant = inter2.getEtat();
+    engine.movePile(inter2,inter1);
+    var etatInter2DeuxiemeMoveApres = inter2.getEtat();
+
+    assertTrue(
+        etatInter1PremierMoveAvant !== etatInter1PremierMoveApres &&
+        etatInter2DeuxiemeMoveAvant === etatInter2DeuxiemeMoveApres);
 };

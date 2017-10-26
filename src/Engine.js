@@ -26,10 +26,12 @@ Lyngk.Engine = function () {
         origine.supprTopPiece();
     };
     this.movePile=function(origine,cible){
-        var listePieceOrigine=origine.getListePiece();
-        var listePieceCible=cible.getListePiece();
-        cible.setListePiece(listePieceCible.concat(listePieceOrigine));
-        origine.cleanPile();
+        if(cible.getEtat() !== 0) {
+            var listePieceOrigine = origine.getListePiece();
+            var listePieceCible = cible.getListePiece();
+            cible.setListePiece(listePieceCible.concat(listePieceOrigine));
+            origine.cleanPile();
+        }
     };
     this.startGame=function(){
         var lettres='ABCDEFGHI';

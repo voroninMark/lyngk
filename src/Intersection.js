@@ -29,5 +29,6 @@ Lyngk.Intersection = function (c) {
     };
     this.cleanPile=function(){
         listePiece=[];
+        this.setEtat('VACANT');
     };
 };
