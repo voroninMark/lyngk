@@ -25,6 +25,10 @@ Lyngk.Engine = function () {
         cible.addPiece(pieceDuHaut);
         origine.supprTopPiece();
     };
+    this.checkChemin=function(origine,cible){
+
+
+    };
     this.moveOk = function(coor1,coor2){
         var l1=coor1.getLigne();
         var l2=coor2.getLigne();
@@ -34,7 +38,6 @@ Lyngk.Engine = function () {
         if(l1===l2 ^ c1 === c2 ^ (l1-l2 === c1-c2)){
             return true;
         }
-
         return false;
     };
     this.poserPile = function(origine,cible){
@@ -44,7 +47,20 @@ Lyngk.Engine = function () {
             this.poser(cible,listePieceOrigine[i]);
         }
     };
-    this.movePile=function(origine,cible){
+    this.interFromCoor=function(coor){
+        var tab=this.getTabInter();
+        for(var i=0;i<tab.length;i++) {
+            var testColonne = tab[i].getCoor().getColonne();
+            var testLigne = tab[i].getCoor().getLigne();
+            if(testLigne === coor.getLigne() && testColonne === coor.getColonne()){
+                return tab[i];
+            }
+        }
+        return null;
+    };
+    this.movePile=function(origineCoor,cibleCoor){
+        var origine=this.interFromCoor(origineCoor);
+        var cible=this.interFromCoor(cibleCoor);
         var coorOrigine = origine.getCoor();
         var coorCible = cible.getCoor();
         if(cible.getEtat() !== 0 && this.moveOk(coorOrigine,coorCible)) {

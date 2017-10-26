@@ -233,76 +233,121 @@ LyngkTestCase1.prototype.testHistoire15=function() {
 LyngkTestCase1.prototype.testHistoire16=function() {
     var engine=new Lyngk.Engine();
 
-    var coor1=new Lyngk.Coordinates('B',3);
-    var coor2=new Lyngk.Coordinates('B',2);
+    var B3=new Lyngk.Coordinates('B',3);
+    var B2=new Lyngk.Coordinates('B',2);
+    engine.startGame();
+    var interB2=engine.interFromCoor(B2);
+    var interB3=engine.interFromCoor(B3);
 
-    var inter1=new Lyngk.Intersection(coor1);
-    var inter2=new Lyngk.Intersection(coor2);
+    // on pose 2 pieces supplémentaires pour respecter l'histoire
+    engine.poser(interB2,new Lyngk.Piece('WHITE'));
+    engine.poser(interB2,new Lyngk.Piece('BLACK'));
 
-    engine.poser(inter1,new Lyngk.Piece('WHITE'));
-    engine.poser(inter1,new Lyngk.Piece('BLACK'));
-    engine.poser(inter1,new Lyngk.Piece('RED'));
-    engine.poser(inter2,new Lyngk.Piece('RED'));
+    var couleurB2=interB2.getCouleur();
 
-    var couleurInter1=inter1.getCouleur();
+    engine.movePile(B2,B3);
 
-    engine.movePile(inter1,inter2);
+    var couleurB3=interB3.getCouleur();
 
-    var couleurInter2=inter2.getCouleur();
-    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0 && inter2.getListePiece().length === 4);
+    assertTrue(couleurB2===couleurB3 && interB2.getListePiece().length === 0 && interB3.getListePiece().length === 4);
 };
 
 LyngkTestCase1.prototype.testHistoire17=function() {
     var engine=new Lyngk.Engine();
 
-    var coor1=new Lyngk.Coordinates('B',3);
-    var coor2=new Lyngk.Coordinates('B',2);
+    var B3=new Lyngk.Coordinates('B',3);
+    var B2=new Lyngk.Coordinates('B',2);
+    engine.startGame();
+    var interB2=engine.interFromCoor(B2);
+    var interB3=engine.interFromCoor(B3);
 
-    var inter1=new Lyngk.Intersection(coor1);
-    var inter2=new Lyngk.Intersection(coor2);
+    var etatB2PremierMoveAvant = interB2.getEtat();
+    engine.movePile(B2,B3);
+    var etatB2PremierMoveApres = interB2.getEtat();
 
-    engine.poser(inter1,new Lyngk.Piece('WHITE'));
-    engine.poser(inter1,new Lyngk.Piece('BLACK'));
-    engine.poser(inter1,new Lyngk.Piece('RED'));
-    engine.poser(inter2,new Lyngk.Piece('RED'));
-
-    var etatInter1PremierMoveAvant = inter1.getEtat();
-    engine.movePile(inter1,inter2);
-    var etatInter1PremierMoveApres = inter1.getEtat();
-
-    var etatInter2DeuxiemeMoveAvant = inter2.getEtat();
-    engine.movePile(inter2,inter1);
-    var etatInter2DeuxiemeMoveApres = inter2.getEtat();
+    var etatB3DeuxiemeMoveAvant = interB3.getEtat();
+    engine.movePile(B3,B2);
+    var etatB3DeuxiemeMoveApres = interB3.getEtat();
 
     assertTrue(
-        etatInter1PremierMoveAvant !== etatInter1PremierMoveApres &&
-        etatInter2DeuxiemeMoveAvant === etatInter2DeuxiemeMoveApres);
+        etatB2PremierMoveAvant !== etatB2PremierMoveApres &&
+        etatB3DeuxiemeMoveAvant === etatB3DeuxiemeMoveApres);
 };
 
 LyngkTestCase1.prototype.testHistoire18=function() {
     var engine=new Lyngk.Engine();
 
-    var coor1=new Lyngk.Coordinates('B',3);
-    var coor2=new Lyngk.Coordinates('B',2);
-    var coor3=new Lyngk.Coordinates('C',2);
+    var B3=new Lyngk.Coordinates('B',3);
+    var B2=new Lyngk.Coordinates('B',2);
+    var C2=new Lyngk.Coordinates('C',2);
+    engine.startGame();
+    var interB2=engine.interFromCoor(B2);
+    var interC2=engine.interFromCoor(C2);
 
-    var inter1=new Lyngk.Intersection(coor1);
-    var inter2=new Lyngk.Intersection(coor2);
-    var inter3=new Lyngk.Intersection(coor3);
+    var etatB2avant = interB2.getEtat();
+    engine.movePile(B2,B3);
+    var etatB2apres = interB2.getEtat();
 
-    engine.poser(inter1,new Lyngk.Piece('WHITE'));
-    engine.poser(inter2,new Lyngk.Piece('RED'));
-    engine.poser(inter3,new Lyngk.Piece('BLUE'));
-
-    var etatInter2PremierMoveAvant = inter1.getEtat();
-    engine.movePile(inter2,inter1);
-    var etatInter2PremierMoveApres = inter1.getEtat();
-
-    var etatInter3DeuxiemeMoveAvant = inter3.getEtat();
-    engine.movePile(inter3,inter2);
-    var etatInter3DeuxiemeMoveApres = inter3.getEtat();
+    var etatC2avant = interC2.getEtat();
+    engine.movePile(C2,B3);
+    var etatC2apres = interC2.getEtat();
 
     assertTrue(
-        etatInter2PremierMoveAvant !== etatInter2PremierMoveApres &&
-        etatInter3DeuxiemeMoveAvant === etatInter3DeuxiemeMoveApres);
+        etatB2avant !== etatB2apres &&
+        etatC2avant === etatC2apres);
+};
+
+LyngkTestCase1.prototype.testHistoire19=function() {
+    var engine=new Lyngk.Engine();
+    engine.startGame();
+
+    var H5=new Lyngk.Coordinates('H',5);
+    var I7=new Lyngk.Coordinates('I',7);
+    var H6=new Lyngk.Coordinates('H',6);
+    var H8=new Lyngk.Coordinates('H',8);
+    var F5=new Lyngk.Coordinates('F',5);
+    var F3=new Lyngk.Coordinates('F',3);
+
+    var interH5=engine.interFromCoor(H5);
+    var interH6=engine.interFromCoor(H6);
+    var interI7=engine.interFromCoor(I7);
+
+    var etatI7_avant_I7toH6;
+    var etatI7_apres_I7toH6;
+    var etatH6_avant_H6toH5;
+    var etatH6_apres_H6toH5;
+    var etatH5_avant_H5toH8;
+    var etatH5_apres_H5toH8;
+    var etatH5_avant_H5toF5;
+    var etatH5_apres_H5toF5;
+    var etatH5_avant_H5toF3;
+    var etatH5_apres_H5toF3;
+
+    etatI7_avant_I7toH6=interI7.getEtat();
+    engine.movePile(I7,H6);
+    etatI7_apres_I7toH6=interI7.getEtat();
+
+    etatH6_avant_H6toH5=interH6.getEtat();
+    engine.movePile(H6,H5);
+    etatH6_apres_H6toH5=interH6.getEtat();
+
+    etatH5_avant_H5toH8=interH5.getEtat();
+    engine.movePile(H5,H8);
+    etatH5_apres_H5toH8=interH5.getEtat();
+
+    etatH5_avant_H5toF5=interH5.getEtat();
+    engine.movePile(H5,F5);
+    etatH5_apres_H5toF5=interH5.getEtat();
+
+    etatH5_avant_H5toF3=interH5.getEtat();
+    engine.movePile(H5,H8);
+    etatH5_apres_H5toF3=interH5.getEtat();
+
+    assertTrue(
+        etatI7_avant_I7toH6!==etatI7_apres_I7toH6 &&
+        etatH6_avant_H6toH5!==etatH6_apres_H6toH5 &&
+        etatH5_avant_H5toH8 === etatH5_apres_H5toH8 &&
+        etatH5_avant_H5toF5 === etatH5_apres_H5toF5 &&
+        etatH5_avant_H5toF3 === etatH5_apres_H5toF3
+    );
 };
