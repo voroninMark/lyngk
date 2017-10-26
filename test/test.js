@@ -278,3 +278,31 @@ LyngkTestCase1.prototype.testHistoire17=function() {
         etatInter1PremierMoveAvant !== etatInter1PremierMoveApres &&
         etatInter2DeuxiemeMoveAvant === etatInter2DeuxiemeMoveApres);
 };
+
+LyngkTestCase1.prototype.testHistoire18=function() {
+    var engine=new Lyngk.Engine();
+
+    var coor1=new Lyngk.Coordinates('B',3);
+    var coor2=new Lyngk.Coordinates('B',2);
+    var coor3=new Lyngk.Coordinates('C',2);
+
+    var inter1=new Lyngk.Intersection(coor1);
+    var inter2=new Lyngk.Intersection(coor2);
+    var inter3=new Lyngk.Intersection(coor3);
+
+    engine.poser(inter1,new Lyngk.Piece('WHITE'));
+    engine.poser(inter2,new Lyngk.Piece('RED'));
+    engine.poser(inter3,new Lyngk.Piece('BLUE'));
+
+    var etatInter1PremierMoveAvant = inter1.getEtat();
+    engine.movePile(inter2,inter1);
+    var etatInter1PremierMoveApres = inter1.getEtat();
+
+    var etatInter3DeuxiemeMoveAvant = inter3.getEtat();
+    engine.movePile(inter3,inter2);
+    var etatInter3DeuxiemeMoveApres = inter3.getEtat();
+
+    assertTrue(
+        etatInter1PremierMoveAvant !== etatInter1PremierMoveApres &&
+        etatInter3DeuxiemeMoveAvant === etatInter3DeuxiemeMoveApres);
+};
