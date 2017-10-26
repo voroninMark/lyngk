@@ -25,11 +25,30 @@ Lyngk.Engine = function () {
         cible.addPiece(pieceDuHaut);
         origine.supprTopPiece();
     };
+    this.moveOk = function(coor1,coor2){
+        var l1=coor1.getLigne();
+        var l2=coor2.getLigne();
+        var c1=coor1.getColonne().charCodeAt(0);
+        var c2=coor2.getColonne().charCodeAt(0);
+
+        if(l1===l2 ^ c1 === c2 ^ (l1-l2 === c1-c2)){
+            return true;
+        }
+
+        return false;
+    };
+    this.poserPile = function(origine,cible){
+        var listePieceOrigine = origine.getListePiece();
+        var listePieceCible = cible.getListePiece();
+        for(var i = 0; i<listePieceOrigine.length;i++){
+            this.poser(cible,listePieceOrigine[i]);
+        }
+    };
     this.movePile=function(origine,cible){
-        if(cible.getEtat() !== 0) {
-            var listePieceOrigine = origine.getListePiece();
-            var listePieceCible = cible.getListePiece();
-            cible.setListePiece(listePieceCible.concat(listePieceOrigine));
+        var coorOrigine = origine.getCoor();
+        var coorCible = cible.getCoor();
+        if(cible.getEtat() !== 0 && this.moveOk(coorOrigine,coorCible)) {
+            this.poserPile(origine,cible);
             origine.cleanPile();
         }
     };

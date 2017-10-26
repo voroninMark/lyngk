@@ -31,4 +31,7 @@ Lyngk.Intersection = function (c) {
         listePiece=[];
         this.setEtat('VACANT');
     };
+    this.getCoor = function(){
+        return coor;
+    }
 };
