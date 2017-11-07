@@ -399,3 +399,33 @@ LyngkTestCase1.prototype.testHistoire21=function() {
     assertTrue(etatC3_avant_C3toB3 === etatC3_apres_C3toB3);
 
 };
+
+LyngkTestCase1.prototype.testHistoire21=function() {
+    var engine=new Lyngk.Engine();
+    engine.startGame();
+
+    var I7=new Lyngk.Coordinates('I',7);
+    var H6=new Lyngk.Coordinates('H',6);
+    var G4=new Lyngk.Coordinates('G',4);
+    var G5=new Lyngk.Coordinates('G',5);
+    var G6=new Lyngk.Coordinates('G',6);
+
+    var etatG6_avant_G6toH6;
+    var etatG6_apres_G6toH6;
+    var etatH6_avant_G6toH6;
+    var etatH6_apres_G6toH6;
+
+    engine.movePile(I7,H6);
+    engine.movePile(G4,G5);
+    engine.movePile(G5,G6);
+    etatG6_avant_G6toH6=engine.interFromCoor(G6).getListePiece().length;
+    etatH6_avant_G6toH6=engine.interFromCoor(H6).getListePiece().length;
+    engine.movePile(G6,H6);
+    etatH6_apres_G6toH6=engine.interFromCoor(H6).getListePiece().length;
+    etatG6_apres_G6toH6=engine.interFromCoor(G6).getListePiece().length;
+
+    assertTrue(
+      etatH6_avant_G6toH6 === etatH6_apres_G6toH6 &&
+      etatG6_avant_G6toH6 === etatG6_apres_G6toH6
+    );
+};
