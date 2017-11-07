@@ -352,7 +352,7 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     );
 };
 
-LyngkTestCase1.prototype.testHistoire19=function() {
+LyngkTestCase1.prototype.testHistoire20=function() {
     var engine=new Lyngk.Engine();
     engine.startGame();
 
@@ -378,4 +378,24 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     assertTrue(taille_pille_D2_avant_move_E2 === 3 &&
                 taille_pille_D2_apres_move_E2 === 3
     );
+};
+
+LyngkTestCase1.prototype.testHistoire21=function() {
+    var engine=new Lyngk.Engine();
+    engine.startGame();
+
+    var A3=new Lyngk.Coordinates('A',3);
+    var B3=new Lyngk.Coordinates('B',3);
+    var C3=new Lyngk.Coordinates('C',3);
+
+    var etatC3_avant_C3toB3;
+    var etatC3_apres_C3toB3;
+
+    engine.movePile(A3,B3);
+    etatC3_avant_C3toB3=engine.interFromCoor(C3).getEtat();
+    engine.movePile(C3,B3);
+    etatC3_apres_C3toB3=engine.interFromCoor(C3).getEtat();
+
+    assertTrue(etatC3_avant_C3toB3 === etatC3_apres_C3toB3);
+
 };
