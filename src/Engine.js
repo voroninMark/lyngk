@@ -25,50 +25,56 @@ Lyngk.Engine = function () {
         cible.addPiece(pieceDuHaut);
         origine.supprTopPiece();
     };
-    this.moveOk = function(coor1,coor2){
+    this.moveOk = function(origine,cible){
+        var coor1=origine.getCoor();
+        var coor2=cible.getCoor();
         var l1=coor1.getLigne();
         var l2=coor2.getLigne();
         var c1=coor1.getColonne().charCodeAt(0);
         var c2=coor2.getColonne().charCodeAt(0);
-
-        if(l1===l2 ^ c1 === c2 ^ (l1-l2 === c1-c2)){
-            if(l1 === l2){
-                var max = Math.max(c1,c2);
-                var min = Math.min(c1,c2);
-                for(var i = min+1;i<max;i++){
-                    var temp_col= String.fromCharCode(i);
-                    var temp=new Lyngk.Coordinates(temp_col,l1);
-                    if(this.interFromCoor(temp).getEtat() !== 0){
-                        return false;
+        if(origine.getEtat() === 1 && cible.getEtat() > 1){
+            return false;
+        }
+        if(origine.getEtat() !== 3 && cible.getEtat() !== 0) {
+            if (l1 === l2 ^ c1 === c2 ^ (l1 - l2 === c1 - c2)) {
+                if (l1 === l2) {
+                    var max = Math.max(c1, c2);
+                    var min = Math.min(c1, c2);
+                    for (var i = min + 1; i < max; i++) {
+                        var temp_col = String.fromCharCode(i);
+                        var temp = new Lyngk.Coordinates(temp_col, l1);
+                        if (this.interFromCoor(temp).getEtat() !== 0) {
+                            return false;
+                        }
                     }
+                    return true;
                 }
-                return true;
-            }
-            if(c1 === c2){
-                var max = Math.max(l1,l2);
-                var min = Math.min(l1,l2);
-                for(var i = min+1;i<max;i++){
-                    var temp=new Lyngk.Coordinates(coor1.getColonne(),i);
-                    if(this.interFromCoor(temp).getEtat() === 0){
-                        return false;
+                if (c1 === c2) {
+                    var max = Math.max(l1, l2);
+                    var min = Math.min(l1, l2);
+                    for (var i = min + 1; i < max; i++) {
+                        var temp = new Lyngk.Coordinates(coor1.getColonne(), i);
+                        if (this.interFromCoor(temp).getEtat() === 0) {
+                            return false;
+                        }
                     }
+                    return true;
                 }
-                return true;
-            }
-            if(l1-l2 === c1-c2){
-                var max_c = Math.max(c1,c2);
-                var min_c = Math.min(c1,c2)+1;
-                var max_l = Math.max(l1,l2);
-                var min_l = Math.min(l1,l2)+1;
-                while(min_c<max_c && min_l<max_l){
-                    var temp=new Lyngk.Coordinates(String.fromCharCode(min_c),min_l);
-                    if(this.interFromCoor(temp).getEtat() !== 0){
-                        return false;
+                if (l1 - l2 === c1 - c2) {
+                    var max_c = Math.max(c1, c2);
+                    var min_c = Math.min(c1, c2) + 1;
+                    var max_l = Math.max(l1, l2);
+                    var min_l = Math.min(l1, l2) + 1;
+                    while (min_c < max_c && min_l < max_l) {
+                        var temp = new Lyngk.Coordinates(String.fromCharCode(min_c), min_l);
+                        if (this.interFromCoor(temp).getEtat() !== 0) {
+                            return false;
+                        }
+                        min_c++;
+                        min_l++;
                     }
-                    min_c++;
-                    min_l++;
+                    return true;
                 }
-                return true;
             }
         }
         return false;
@@ -94,9 +100,7 @@ Lyngk.Engine = function () {
     this.movePile=function(origineCoor,cibleCoor){
         var origine=this.interFromCoor(origineCoor);
         var cible=this.interFromCoor(cibleCoor);
-        var coorOrigine = origine.getCoor();
-        var coorCible = cible.getCoor();
-        if(origine.getEtat() !== 3 && cible.getEtat() !== 0 && this.moveOk(coorOrigine,coorCible)) {
+        if(this.moveOk(origine,cible)) {
             this.poserPile(origine,cible);
             origine.cleanPile();
         }
