@@ -344,8 +344,8 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     etatH5_apres_H5toF3=interH5.getEtat();
 
     assertTrue(
-        etatI7_avant_I7toH6!==etatI7_apres_I7toH6 &&
-        etatH6_avant_H6toH5!==etatH6_apres_H6toH5 &&
+        etatI7_avant_I7toH6 !== etatI7_apres_I7toH6 &&
+        etatH6_avant_H6toH5 !== etatH6_apres_H6toH5 &&
         etatH5_avant_H5toH8 === etatH5_apres_H5toH8 &&
         etatH5_avant_H5toF5 === etatH5_apres_H5toF5 &&
         etatH5_avant_H5toF3 === etatH5_apres_H5toF3
