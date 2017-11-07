@@ -32,7 +32,8 @@ Lyngk.Engine = function () {
         var l2=coor2.getLigne();
         var c1=coor1.getColonne().charCodeAt(0);
         var c2=coor2.getColonne().charCodeAt(0);
-        if(origine.getEtat() === 1 && cible.getEtat() > 1){
+        if((origine.getListePiece().length < cible.getListePiece().length) ||
+            (origine.getListePiece().length + cible.getListePiece().length >5)){
             return false;
         }
         if(origine.getEtat() !== 3 && cible.getEtat() !== 0) {

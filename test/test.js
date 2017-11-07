@@ -420,10 +420,9 @@ LyngkTestCase1.prototype.testHistoire21=function() {
     engine.movePile(G5,G6);
     etatG6_avant_G6toH6=engine.interFromCoor(G6).getListePiece().length;
     etatH6_avant_G6toH6=engine.interFromCoor(H6).getListePiece().length;
-    engine.movePile(G6,H6);
+    engine.movePile(H6,G6);
     etatH6_apres_G6toH6=engine.interFromCoor(H6).getListePiece().length;
     etatG6_apres_G6toH6=engine.interFromCoor(G6).getListePiece().length;
-
     assertTrue(
       etatH6_avant_G6toH6 === etatH6_apres_G6toH6 &&
       etatG6_avant_G6toH6 === etatG6_apres_G6toH6
