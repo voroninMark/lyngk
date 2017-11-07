@@ -374,7 +374,6 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     engine.movePile(D2,E2);
     taille_pille_D2_apres_move_E2 = engine.interFromCoor(D2).getEtat();
 
-    console.log(taille_pille_D2_apres_move_E2);
 
     assertTrue(taille_pille_D2_avant_move_E2 === 3 &&
                 taille_pille_D2_apres_move_E2 === 3

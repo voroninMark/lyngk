@@ -96,7 +96,7 @@ Lyngk.Engine = function () {
         var cible=this.interFromCoor(cibleCoor);
         var coorOrigine = origine.getCoor();
         var coorCible = cible.getCoor();
-        if(cible.getEtat() !== 0 && this.moveOk(coorOrigine,coorCible)) {
+        if(origine.getEtat() !== 3 && cible.getEtat() !== 0 && this.moveOk(coorOrigine,coorCible)) {
             this.poserPile(origine,cible);
             origine.cleanPile();
         }
