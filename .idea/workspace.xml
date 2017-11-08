@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
+    <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="Histoire 29 test fail">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
@@ -20,8 +20,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="545" column="39" lean-forward="false" selection-start-line="545" selection-start-column="39" selection-end-line="545" selection-end-column="39" />
+            <state relative-caret-position="417">
+              <caret line="566" column="45" lean-forward="false" selection-start-line="566" selection-start-column="45" selection-end-line="566" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -282,14 +282,7 @@
       <workItem from="1509026392990" duration="8374000" />
       <workItem from="1510056162208" duration="7333000" />
       <workItem from="1510133405339" duration="733000" />
-      <workItem from="1510134156889" duration="15414000" />
-    </task>
-    <task id="LOCAL-00015" summary="Histoire 6 test fail">
-      <created>1507538244303</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1507538244303</updated>
+      <workItem from="1510134156889" duration="15618000" />
     </task>
     <task id="LOCAL-00016" summary="Histoire 6 test fail + commentaires">
       <created>1507538383117</created>
@@ -627,13 +620,17 @@
       <option name="project" value="LOCAL" />
       <updated>1510149530737</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Histoire 28 test success bis, nom du test changé">
+      <created>1510149591706</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1510149591706</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2017.11.08 at 14h 54m 23s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
     <history-entry file="Tests - 2017.11.08 at 14h 54m 50s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
@@ -661,9 +658,12 @@
     <history-entry file="Tests - 2017.11.08 at 14h 58m 03s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
+    <history-entry file="Tests - 2017.11.08 at 15h 02m 55s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87261000" />
+    <option name="totallyTimeSpent" value="87465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="992" y="24" width="928" height="1056" extended-state="4" />
@@ -674,7 +674,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32526317" sideWeight="0.16702586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.83297414" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.83297414" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -720,7 +720,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histoire 17 test success , je n'ai pas le test fail car j'ai oublié de push et j'avais deja codé la fonction qui manquait, j'ai aussi modifié le test 16 qui échouait a cause du 17" />
     <MESSAGE value="Histoire 18 test fail" />
     <MESSAGE value="Histoire 18 test success" />
     <MESSAGE value="Histoire 18 test fail , j'ai du mofifier le fonctionnement de mon engine et notament du movePile qui prenait en paramètre des intersections et maintenant prend en paramètre des coordonnées" />
@@ -745,7 +744,8 @@
     <MESSAGE value="Histoire 27 test success, + maj du fonctionnement des couleurs" />
     <MESSAGE value="Histoire 28 test fail" />
     <MESSAGE value="Histoire 28 test success, le test à aussi été modifié car j'ai oublié de faire reclamer une couleur au joueur 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histoire 28 test success, le test à aussi été modifié car j'ai oublié de faire reclamer une couleur au joueur 1" />
+    <MESSAGE value="Histoire 28 test success bis, nom du test changé" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire 28 test success bis, nom du test changé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -917,8 +917,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="545" column="39" lean-forward="false" selection-start-line="545" selection-start-column="39" selection-end-line="545" selection-end-column="39" />
+        <state relative-caret-position="417">
+          <caret line="566" column="45" lean-forward="false" selection-start-line="566" selection-start-column="45" selection-end-line="566" selection-end-column="45" />
           <folding />
         </state>
       </provider>

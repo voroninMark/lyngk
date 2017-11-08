@@ -559,3 +559,11 @@ LyngkTestCase1.prototype.testHistoire28=function() {
     // la taille de B4 n'a pas changé , le deplacement B3
     //vers B4 a donc echoué
 };
+LyngkTestCase1.prototype.testHistoire29=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie('white');
+    var engine=partie.getEngine();
+
+    assertTrue(engine.nbCoupsDispo() === 40);
+};
+
