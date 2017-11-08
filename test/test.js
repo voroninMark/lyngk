@@ -17,11 +17,11 @@ LyngkTestCase1.prototype.testA=function(){
 };
 
 LyngkTestCase1.prototype.testB=function(){
-    var c='C';
     var l=3;
+    var c='A';
+    var coor=new Lyngk.Coordinates(c,l);
     var s=c+l;
-    var c=new Lyngk.Coordinates(c,l);
-    assertTrue(c.toString()===s);
+    assertTrue(coor.toString()===s);
 };
 
 LyngkTestCase1.prototype.testC=function() {
@@ -121,7 +121,6 @@ LyngkTestCase1.prototype.testI=function() {
 };
 
 LyngkTestCase1.prototype.testHistoire11=function() {
-    var cpt=0;
     var lettres='ABCDEFGHI';
     var engine=new Lyngk.Engine();
     var tabInter=[];
@@ -400,7 +399,7 @@ LyngkTestCase1.prototype.testHistoire21=function() {
 
 };
 
-LyngkTestCase1.prototype.testHistoire21=function() {
+LyngkTestCase1.prototype.testHistoire22=function() {
     var engine=new Lyngk.Engine();
     engine.startGame();
 
@@ -427,4 +426,43 @@ LyngkTestCase1.prototype.testHistoire21=function() {
       etatH6_avant_G6toH6 === etatH6_apres_G6toH6 &&
       etatG6_avant_G6toH6 === etatG6_apres_G6toH6
     );
+};
+LyngkTestCase1.prototype.testHistoire22=function() {
+    var engine=new Lyngk.Engine();
+    s
+    var G3=new Lyngk.Coordinates('G',3);
+    var G4=new Lyngk.Coordinates('G',4);
+    var G5=new Lyngk.Coordinates('G',5);
+    var G6=new Lyngk.Coordinates('G',6);
+    var G7=new Lyngk.Coordinates('G',7);
+
+    var blue=new Lyngk.Piece('BLUE');
+    var white=new Lyngk.Piece('WHITE');
+    var red=new Lyngk.Piece('RED');
+
+    var interG3=engine.interFromCoor(G3);
+    var interG4=engine.interFromCoor(G4);
+    var interG5=engine.interFromCoor(G5);
+    var interG6=engine.interFromCoor(G6);
+    var interG7=engine.interFromCoor(G7);
+
+    var length_G5;
+    var length_G6_avant_G6toG7;
+    var length_G6_apres_G6toG7;
+
+    engine.poser(interG3,blue);
+    engine.poser(interG4,white);
+    engine.poser(interG5,white);
+    engine.poser(interG6,red);
+    engine.poser(interG7,blue);
+
+    engine.movePile(G3,G4);
+    engine.movePile(G4,G5);
+    length_G5=interG5.getListePiece().length;
+    engine.movePile(G5,G6);
+    length_G6_avant_G6toG7=interG6.getListePiece().length;
+    engine.movePile(G6,G7);
+    length_G6_apres_G6toG7=interG6.getListePiece().length;
+
+    assertTrue(length_G5 === 3 && length_G6_avant_G6toG7 === length_G6_apres_G6toG7);
 };
