@@ -104,6 +104,12 @@ Lyngk.Engine = function () {
             this.poser(cible,listePieceOrigine[i]);
         }
     };
+    this.coorFromString = function(s){
+        var c=s.charAt(0);
+        var l=parseInt(s.charAt(1));
+
+        return new Lyngk.Coordinates(c,l);
+    };
     this.interFromCoor=function(coor){
         var tab=this.getTabInter();
         for(var i=0;i<tab.length;i++) {

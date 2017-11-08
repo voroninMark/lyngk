@@ -12,9 +12,11 @@ Lyngk.Partie = function () {
         engine.startGame();
         tour=1;
     };
-    this.jouer = function (origine,cible) {
-      engine.movePile(origine,cible);
-      tour++;
+    this.jouer = function (s_origine,s_cible) {
+        var origine=engine.coorFromString(s_origine);
+        var cible=engine.coorFromString(s_cible);
+        engine.movePile(origine,cible);
+        tour++;
     };
     this.getJoueur = function(n){
         return joueurs[n-1];

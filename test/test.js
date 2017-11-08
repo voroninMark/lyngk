@@ -485,14 +485,12 @@ LyngkTestCase1.prototype.testHistoire25=function() {
     var partie = new Lyngk.Partie();
     partie.startPartie();
 
-    var A3=new Lyngk.Coordinates('A',3);
-    var B3=new Lyngk.Coordinates('B',3);
 
     var j_avant_move;
     var j_apres_move;
 
     j_avant_move = partie.getJoueurCourant().getNum();
-    partie.jouer(A3,B3);
+    partie.jouer('A3','B3');
     j_apres_move = partie.getJoueurCourant().getNum();
 
     assertTrue(j_avant_move === 1 && j_apres_move === 2);
@@ -504,18 +502,22 @@ LyngkTestCase1.prototype.testHistoire26=function() {
     var partie = new Lyngk.Partie();
     partie.startPartie();
 
-    var A3=new Lyngk.Coordinates('A',3);
-    var B3=new Lyngk.Coordinates('B',3);
-
     var couleur_j1;
     var couleur_j2;
 
     partie.getJoueurCourant().reclamer('RED');
-    partie.jouer(A3,B3);
+    partie.jouer('A3','B3');
     partie.getJoueurCourant().reclamer('BLUE');
 
 
     assertTrue(partie.getJoueur(1).couleurIn('RED') &&
                 partie.getJoueur(2).couleurIn('BLUE')
     );
+};
+
+LyngkTestCase1.prototype.testHistoire27=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie();
+
+    partie.jouer('A3','B3');
 };
