@@ -511,12 +511,11 @@ LyngkTestCase1.prototype.testHistoire26=function() {
     var couleur_j2;
 
     partie.getJoueurCourant().reclamer('RED');
-    couleur_j1=partie.getJoueurCourant().getCouleur();
     partie.jouer(A3,B3);
-    partie.getJoueurCourant().reclamer('BLEU');
-    couleur_j2=partie.getJoueurCourant().getCouleur();
+    partie.getJoueurCourant().reclamer('BLUE');
 
-    assertTrue(couleur_j1 === partie.getJoueur(1).couleurIn('RED') &&
-                couleur_j2 === partie.getJoueur(2).couleurIn('BLUE')
+
+    assertTrue(partie.getJoueur(1).couleurIn('RED') &&
+                partie.getJoueur(2).couleurIn('BLUE')
     );
 };
