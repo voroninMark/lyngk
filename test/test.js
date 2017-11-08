@@ -561,9 +561,9 @@ LyngkTestCase1.prototype.testHistoire28=function() {
 };
 LyngkTestCase1.prototype.testHistoire29=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie('white');
+    partie.startPartie('normal');
     var engine=partie.getEngine();
-
-    assertTrue(engine.nbCoupsDispo() === 40);
+    console.log(partie.nbCoupsDispo());
+    assertTrue(partie.nbCoupsDispo() === 40);
 };
 

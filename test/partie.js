@@ -20,6 +20,10 @@ Lyngk.Partie = function () {
         }
         tour=1;
     };
+    this.nbCoupsDispo = function(){
+        var couleurs=this.getJoueurCourant().getCouleurs();
+        return engine.calcCoups(couleurs);
+    };
     this.jouer = function (s_origine,s_cible) {
         var origine=engine.coorFromString(s_origine);
         var cible=engine.coorFromString(s_cible);
