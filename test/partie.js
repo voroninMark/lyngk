@@ -24,6 +24,12 @@ Lyngk.Partie = function () {
         var origine=engine.coorFromString(s_origine);
         var cible=engine.coorFromString(s_cible);
         engine.movePile(origine,cible);
+        if( engine.interFromCoor(cible).getEtat() === 3 &&
+            this.getJoueurCourant().couleurIn(engine.interFromCoor(cible).getCouleur())
+        ){
+            engine.interFromCoor(cible).cleanPile();
+            this.getJoueurCourant().addPoint();
+        }
         tour++;
     };
     this.getJoueur = function(n){

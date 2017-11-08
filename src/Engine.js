@@ -32,7 +32,7 @@ Lyngk.Engine = function () {
         for(var i = 0;i<length_cible;i++) {
             for(var j = 0;j<length_origine;j++){
                 if (origine.getListePiece()[j].getCouleur() === cible.getListePiece()[i].getCouleur() ) {
-                    if(origine.getListePiece()[j].getCouleur() !== 5) {
+                    if(origine.getListePiece()[j].getCouleur() !== 'WHITE') {
                         return false;
                     }
                 }
@@ -172,7 +172,15 @@ Lyngk.Engine = function () {
             }
         }
     };
-
+    this.nbPieces = function () {
+        var cpt=0;
+        for(var i = 0; i<tabInter.length;i++){
+            for(var j = 0;j<tabInter[i].getListePiece().length;j++){
+                cpt++;
+            }
+        }
+        return cpt;
+    };
     this.getTabInter=function(){
         return tabInter;
     };

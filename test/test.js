@@ -158,22 +158,22 @@ LyngkTestCase1.prototype.testHistoire12=function() {
 
     listeInter.forEach(function(elem){
         elem.getListePiece().forEach(function(piece){
-            if(piece.getCouleur()===0){
+            if(Lyngk.Color[piece.getCouleur()]===0){
                 cptBlack++;
             }
-            if(piece.getCouleur()===1){
+            if(Lyngk.Color[piece.getCouleur()]===1){
                 cptIvory++;
             }
-            if(piece.getCouleur()===2){
+            if(Lyngk.Color[piece.getCouleur()]===2){
                 cptBlue++;
             }
-            if(piece.getCouleur()===3){
+            if(Lyngk.Color[piece.getCouleur()]===3){
                 cptRed++;
             }
-            if(piece.getCouleur()===4){
+            if(Lyngk.Color[piece.getCouleur()]===4){
                 cptGreen++;
             }
-            if(piece.getCouleur()===5){
+            if(Lyngk.Color[piece.getCouleur()]===5){
                 cptWhite++;
             }
         });
@@ -242,12 +242,11 @@ LyngkTestCase1.prototype.testHistoire16=function() {
     engine.poser(interB2,new Lyngk.Piece('WHITE'));
     engine.poser(interB2,new Lyngk.Piece('BLACK'));
 
-    var couleurB2=interB2.getCouleur();
+    var couleurB2=Lyngk.Color[interB2.getCouleur()];
 
     engine.movePile(B2,B3);
 
-    var couleurB3=interB3.getCouleur();
-
+    var couleurB3=Lyngk.Color[interB3.getCouleur()];
     assertTrue(couleurB2===couleurB3 && interB2.getListePiece().length === 0 && interB3.getListePiece().length === 4);
 };
 
@@ -517,21 +516,15 @@ LyngkTestCase1.prototype.testHistoire26=function() {
 
 LyngkTestCase1.prototype.testHistoire27=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie('void');
+    partie.startPartie('white');
     var engine=partie.getEngine();
     var pt_j1_avant=partie.getJoueur(1).getPoints();
     var pt_j1_apres;
     var nbPieces;
 
+    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
     engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('BLUE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('H6')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('G5')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('C3')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('G6')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('C2')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('H7')),new Lyngk.Piece('WHITE'));
-    engine.poser(engine.interFromCoor(engine.coorFromString('D2')),new Lyngk.Piece('WHITE'));
+
 
     partie.getJoueurCourant().reclamer('BLUE');
 
