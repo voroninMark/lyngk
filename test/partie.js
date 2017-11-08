@@ -5,11 +5,19 @@ Lyngk.Partie = function () {
     var engine;
     var tour;
 
-    this.startPartie = function(){
+    this.startPartie = function(param){
         joueurs.push(new Lyngk.Joueur(1));
         joueurs.push(new Lyngk.Joueur(2));
         engine=new Lyngk.Engine();
-        engine.startGame();
+        if(param==='void') {
+            engine.startVoidGame();
+        }
+        if(param==='normal') {
+            engine.startGame();
+        }
+        if(param === 'white') {
+            engine.startWhiteGame();
+        }
         tour=1;
     };
     this.jouer = function (s_origine,s_cible) {
@@ -26,5 +34,8 @@ Lyngk.Partie = function () {
     };
     this.getJoueurCourant = function () {
         return joueurs[(tour+1)%2];
+    };
+    this.getEngine = function () {
+        return engine;
     };
 };

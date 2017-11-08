@@ -483,7 +483,7 @@ LyngkTestCase1.prototype.testHistoire24=function() {
 
 LyngkTestCase1.prototype.testHistoire25=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie();
+    partie.startPartie('normal');
 
 
     var j_avant_move;
@@ -500,7 +500,7 @@ LyngkTestCase1.prototype.testHistoire25=function() {
 
 LyngkTestCase1.prototype.testHistoire26=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie();
+    partie.startPartie('normal');
 
     var couleur_j1;
     var couleur_j2;
@@ -517,7 +517,36 @@ LyngkTestCase1.prototype.testHistoire26=function() {
 
 LyngkTestCase1.prototype.testHistoire27=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie();
+    partie.startPartie('void');
+    var engine=partie.getEngine();
+    var pt_j1_avant=partie.getJoueur(1).getPoints();
+    var pt_j1_apres;
+    var nbPieces;
+
+    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('BLUE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('H6')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('G5')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('C3')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('G6')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('C2')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('H7')),new Lyngk.Piece('WHITE'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('D2')),new Lyngk.Piece('WHITE'));
+
+    partie.getJoueurCourant().reclamer('BLUE');
 
     partie.jouer('A3','B3');
+    partie.jouer('H6','G5');
+    partie.jouer('B3','C3');
+    partie.jouer('G5','G6');
+    partie.jouer('C3','C2');
+    partie.jouer('G6','H7');
+    partie.jouer('C2','D2');
+
+
+    nbPieces=engine.nbPieces();
+    pt_j1_apres=partie.getJoueur(1).getPoints();
+
+    assertTrue(pt_j1_avant === 0 && pt_j1_apres === 1 && nbPieces === 38);
+
 };
