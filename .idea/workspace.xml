@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Coordinates.js" afterPath="$PROJECT_DIR$/src/Coordinates.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.js" afterPath="$PROJECT_DIR$/src/Engine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/joueur.js" afterPath="$PROJECT_DIR$/test/joueur.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/partie.js" afterPath="$PROJECT_DIR$/test/partie.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
@@ -23,8 +23,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="607" column="188" lean-forward="false" selection-start-line="607" selection-start-column="188" selection-end-line="607" selection-end-column="188" />
+            <state relative-caret-position="535">
+              <caret line="629" column="46" lean-forward="false" selection-start-line="629" selection-start-column="46" selection-end-line="629" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -33,8 +33,8 @@
       <file leaf-file-name="joueur.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/joueur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <state relative-caret-position="175">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -43,8 +43,8 @@
       <file leaf-file-name="partie.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/partie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+            <state relative-caret-position="535">
+              <caret line="174" column="26" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/Intersection.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
       <file leaf-file-name="Engine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="977">
-              <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+            <state relative-caret-position="495">
+              <caret line="238" column="42" lean-forward="false" selection-start-line="238" selection-start-column="42" selection-end-line="238" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -84,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/Piece.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,9 +119,9 @@
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/src/Intersection.js" />
         <option value="$PROJECT_DIR$/src/Piece.js" />
+        <option value="$PROJECT_DIR$/src/Coordinates.js" />
         <option value="$PROJECT_DIR$/test/joueur.js" />
         <option value="$PROJECT_DIR$/src/Engine.js" />
-        <option value="$PROJECT_DIR$/src/Coordinates.js" />
         <option value="$PROJECT_DIR$/test/partie.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
       </list>
@@ -134,9 +134,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="671" />
-    <option name="width" value="928" />
-    <option name="height" value="1048" />
+    <option name="x" value="581" />
+    <option name="y" value="30" />
+    <option name="width" value="926" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -159,6 +160,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.11.0/bin/node" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -172,7 +174,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JsTestDriver.Tests">
+  <component name="RunManager" selected="JsTestDriver.LyngkTestCase.testHistoire32">
+    <configuration name="LyngkTestCase.testHistoire32" type="JsTestDriver-test-runner" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/test.js" />
+      <setting name="testCase" value="LyngkTestCase" />
+      <setting name="testMethod" value="testHistoire32" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+    </configuration>
     <configuration name="Tests" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
@@ -251,9 +263,21 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.Tests" />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.LyngkTestCase.testHistoire32" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.LyngkTestCase.testHistoire32" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -285,14 +309,33 @@
       <workItem from="1509026392990" duration="8374000" />
       <workItem from="1510056162208" duration="7333000" />
       <workItem from="1510133405339" duration="733000" />
-      <workItem from="1510134156889" duration="22792000" />
-    </task>
-    <task id="LOCAL-00019" summary="Histoire 7 test success">
-      <created>1507540692801</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1507540692801</updated>
+      <workItem from="1510134156889" duration="26586000" />
+      <workItem from="1510161246106" duration="641000" />
+      <workItem from="1510161900997" duration="446000" />
+      <workItem from="1510162364756" duration="882000" />
+      <workItem from="1510163257607" duration="366000" />
+      <workItem from="1510163634209" duration="134000" />
+      <workItem from="1510163779471" duration="185000" />
+      <workItem from="1510163975989" duration="875000" />
+      <workItem from="1510164866501" duration="352000" />
+      <workItem from="1510165228559" duration="1167000" />
+      <workItem from="1510166408616" duration="514000" />
+      <workItem from="1510166937869" duration="669000" />
+      <workItem from="1510167617646" duration="116000" />
+      <workItem from="1510167749274" duration="80000" />
+      <workItem from="1510167840202" duration="96000" />
+      <workItem from="1510167954453" duration="78000" />
+      <workItem from="1510168043578" duration="107000" />
+      <workItem from="1510168162543" duration="97000" />
+      <workItem from="1510168272815" duration="243000" />
+      <workItem from="1510168527479" duration="182000" />
+      <workItem from="1510168720853" duration="124000" />
+      <workItem from="1510168860189" duration="106000" />
+      <workItem from="1510168976374" duration="38000" />
+      <workItem from="1510169039995" duration="51000" />
+      <workItem from="1510169104949" duration="2014000" />
+      <workItem from="1510171134539" duration="1242000" />
+      <workItem from="1510172389865" duration="712000" />
     </task>
     <task id="LOCAL-00020" summary="Histoire 7 test fail">
       <created>1507542422750</created>
@@ -630,58 +673,65 @@
       <option name="project" value="LOCAL" />
       <updated>1510152264486</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Histoire 31 test success">
+      <created>1510156964680</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1510156964681</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2017.11.08 at 16h 54m 28s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 22m 02s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 55m 11s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 23m 09s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 55m 24s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 28m 38s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 55m 36s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 28m 49s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 55m 45s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 29m 33s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 55m 53s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 21s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 56m 01s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 28s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 59m 09s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 31s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 16h 59m 54s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 34s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.08 at 17h 02m 29s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 36s.xml">
+      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94639000" />
+    <option name="totallyTimeSpent" value="109950000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="581" y="30" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.036637932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32526317" sideWeight="0.16702586" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.17466307" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31595093" sideWeight="0.83297414" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415133" sideWeight="0.82533693" order="2" side_tool="false" content_ui="tabs" x="65" y="52" width="1855" height="986" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997955" sideWeight="0.49380055" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -719,11 +769,36 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
     <option featureType="com.intellij.configurationType" implementationName="JsTestDriver-test-runner" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histoire 19 test fail , j'ai du mofifier le fonctionnement de mon engine et notament du movePile qui prenait en paramètre des intersections et maintenant prend en paramètre des coordonnées" />
     <MESSAGE value="Histoire 19 test success" />
     <MESSAGE value="Histoire 20 test fail" />
     <MESSAGE value="Histoire 20 test success" />
@@ -748,7 +823,8 @@
     <MESSAGE value="Histoire 29 test fail" />
     <MESSAGE value="Histoire 29 test success" />
     <MESSAGE value="Histoire 30 test success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histoire 30 test success" />
+    <MESSAGE value="Histoire 31 test success" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire 31 test success" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -763,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,26 +923,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lyngk.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Piece.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -881,23 +941,7 @@
     <entry file="file://$PROJECT_DIR$/src/Intersection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/joueur.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="977">
-          <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -910,18 +954,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/partie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        <state relative-caret-position="535">
+          <caret line="174" column="26" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="238" column="42" lean-forward="false" selection-start-line="238" selection-start-column="42" selection-end-line="238" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/joueur.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="607" column="188" lean-forward="false" selection-start-line="607" selection-start-column="188" selection-end-line="607" selection-end-column="188" />
+        <state relative-caret-position="535">
+          <caret line="629" column="46" lean-forward="false" selection-start-line="629" selection-start-column="46" selection-end-line="629" selection-end-column="46" />
           <folding />
         </state>
       </provider>

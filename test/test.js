@@ -1,7 +1,7 @@
 'use strict';
 
 var LyngkTestCase1 = TestCase("LyngkTestCase");
-
+/*
 LyngkTestCase1.prototype.testA=function(){
     var cpt=0;
     var lettres='ABCDEFGHI';
@@ -607,4 +607,26 @@ LyngkTestCase1.prototype.testHistoire31=function() {
     assertTrue(coupsA3 === 2 && coupsB3 === 5 && coupsX1 === 0 && coupsE3 === 6);
     // on fait les test sur un plateau blancs avec seulement 4 pieces non blanches pour poivoir avoir des resultat de test conctants ( le plateau de jeu est généré aléatoiremnt normalement
 
+};
+*/
+LyngkTestCase1.prototype.testHistoire32=function() {
+    var partie = new Lyngk.Partie();
+    var win;
+    var lose;
+
+    partie.startPartie('normal');
+    var engine=partie.getEngine();
+    partie.getJoueur(1).reclamer('RED');
+    partie.getJoueur(2).reclamer('BLUE');
+    var res=partie.simulation();
+    var taillePileWin = partie.getTaillePilleWin();
+    win=partie.getVainqueur();
+    lose=partie.getPerdant();
+    console.log(res);
+    if(res==='victoire') {
+        console.log('Vainquer = joueur ' + win.getNum());
+        console.log('Taille pile retenue :: ' + taillePileWin);
+        console.log('Score vainqueur :: ' + win.getPoints());
+        console.log('Score perdant :: ' + lose.getPoints());
+    }
 };

@@ -50,7 +50,7 @@ Lyngk.Engine = function () {
         if( !this.colorCheck(origine,cible) ||
             (origine.getListePiece().length < cible.getListePiece().length) ||
             (origine.getListePiece().length + cible.getListePiece().length >5) ||
-            !coor2.isOk() || !coor1.isOk()
+            !coor2.isOk() || !coor1.isOk() || coor1.toString() === coor2.toString()
         ){
             return false;
         }
@@ -209,5 +209,37 @@ Lyngk.Engine = function () {
         }
         return coups;
     };
+    this.getInterValides = function (couleurs) {
+        var res=[]
+        var check=1;
 
+        for(var i = 0; i<tabInter.length;i++) {
+            if (tabInter[i].getListePiece().length >0) {
+                if (tabInter[i].getCouleur() === 'WHITE') {
+                    check = 0;
+                } else {
+                    for (var j = 0; j < couleurs.length; j++) {
+                        if (tabInter[i].getCouleur() === couleurs[j]) {
+                            check = 0;
+                            break;
+                        }
+                    }
+                }
+                if (check === 1 ){
+                    res.push(tabInter[i]);
+                }
+                check = 1;
+            }
+        }
+        return res;
+    };
+    this.cptPiles = function(n,joueur){
+        var res=0;
+        for(var i = 0; i<tabInter.length;i++){
+            if(tabInter[i].getListePiece().length === n && joueur.couleurIn(tabInter[i].getCouleur())){
+                res++;
+            }
+        }
+        return res;
+    }
 };

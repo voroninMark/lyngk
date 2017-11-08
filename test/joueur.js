@@ -14,6 +14,9 @@ Lyngk.Joueur = function (n) {
     this.getCouleurs = function(){
         return couleurs;
     }
+    this.setPoint = function(n){
+        points=n;
+    };
     this.addPoint = function(){
         points++;
     };
