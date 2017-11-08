@@ -9,7 +9,12 @@ Lyngk.Partie = function () {
         joueurs.push(new Lyngk.Joueur(1));
         joueurs.push(new Lyngk.Joueur(2));
         engine=new Lyngk.Engine();
+        engine.startGame();
         tour=1;
+    };
+    this.jouer = function (origine,cible) {
+      engine.movePile(origine,cible);
+      tour++;
     };
     this.getJoueur = function(n){
         return joueurs[n-1];
