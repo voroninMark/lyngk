@@ -429,7 +429,8 @@ LyngkTestCase1.prototype.testHistoire22=function() {
 };
 LyngkTestCase1.prototype.testHistoire22=function() {
     var engine=new Lyngk.Engine();
-    s
+    engine.startVoidGame();
+
     var G3=new Lyngk.Coordinates('G',3);
     var G4=new Lyngk.Coordinates('G',4);
     var G5=new Lyngk.Coordinates('G',5);

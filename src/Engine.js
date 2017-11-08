@@ -106,6 +106,17 @@ Lyngk.Engine = function () {
             origine.cleanPile();
         }
     };
+    this.startVoidGame=function(){
+        var lettres='ABCDEFGHI';
+        for(var i=1;i<=9;i++){
+            for(var j=1;j<=9;j++){
+                var coor=new Lyngk.Coordinates(lettres[i-1],j);
+                if(coor.isOk()){
+                    tabInter.push(new Lyngk.Intersection(coor));
+                }
+            }
+        }
+    };
     this.startGame=function(){
         var lettres='ABCDEFGHI';
         var listeColor=["BLACK","IVORY","BLUE","RED","GREEN","WHITE"];
@@ -120,7 +131,7 @@ Lyngk.Engine = function () {
                         rand = Math.floor(Math.random() * 6);
                     }while((tabCpt[rand]>=8 && rand!==5) || (rand === 5 && tabCpt[rand]>=3));
                     tabCpt[rand]++;
-                    tabInter.push(new Lyngk.Intersection(coor,listeColor[rand]));
+                    tabInter.push(new Lyngk.Intersection(coor));
                     this.poser(tabInter[tabInter.length - 1], new Lyngk.Piece(listeColor[rand]));
                 }
             }
