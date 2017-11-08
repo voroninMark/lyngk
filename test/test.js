@@ -543,3 +543,18 @@ LyngkTestCase1.prototype.testHistoire27=function() {
     assertTrue(pt_j1_avant === 0 && pt_j1_apres === 1 && nbPieces === 38);
 
 };
+LyngkTestCase1.prototype.testHistoire27=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie('white');
+    var engine=partie.getEngine();
+    var interB4=engine.interFromCoor(engine.coorFromString('B4'));
+    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
+    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('RED'));
+
+    partie.jouer('A3','B3');
+    partie.jouer('B3','B4');
+
+    assertTrue(interB4.getListePiece().length === 1);
+    // la taille de B4 n'a pas changé , le deplacement B3
+    //vers B4 a donc echoué
+};
