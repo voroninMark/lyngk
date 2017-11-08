@@ -234,7 +234,7 @@ LyngkTestCase1.prototype.testHistoire16=function() {
 
     var B3=new Lyngk.Coordinates('B',3);
     var B2=new Lyngk.Coordinates('B',2);
-    engine.startGame();
+    engine.startWhiteGame();
     var interB2=engine.interFromCoor(B2);
     var interB3=engine.interFromCoor(B3);
 
@@ -256,7 +256,7 @@ LyngkTestCase1.prototype.testHistoire17=function() {
 
     var B3=new Lyngk.Coordinates('B',3);
     var B2=new Lyngk.Coordinates('B',2);
-    engine.startGame();
+    engine.startWhiteGame();
     var interB2=engine.interFromCoor(B2);
     var interB3=engine.interFromCoor(B3);
 
@@ -275,13 +275,16 @@ LyngkTestCase1.prototype.testHistoire17=function() {
 
 LyngkTestCase1.prototype.testHistoire18=function() {
     var engine=new Lyngk.Engine();
+    engine.startWhiteGame();
 
     var B3=new Lyngk.Coordinates('B',3);
     var B2=new Lyngk.Coordinates('B',2);
     var C2=new Lyngk.Coordinates('C',2);
-    engine.startGame();
+
     var interB2=engine.interFromCoor(B2);
     var interC2=engine.interFromCoor(C2);
+
+
 
     var etatB2avant = interB2.getEtat();
     engine.movePile(B2,B3);
@@ -353,7 +356,7 @@ LyngkTestCase1.prototype.testHistoire19=function() {
 
 LyngkTestCase1.prototype.testHistoire20=function() {
     var engine=new Lyngk.Engine();
-    engine.startGame();
+    engine.startWhiteGame();
 
     var B4=new Lyngk.Coordinates('B',4);
     var B3=new Lyngk.Coordinates('B',3);
@@ -361,6 +364,7 @@ LyngkTestCase1.prototype.testHistoire20=function() {
     var C2=new Lyngk.Coordinates('C',2);
     var D2=new Lyngk.Coordinates('D',2);
     var E2=new Lyngk.Coordinates('E',2);
+
 
     var taille_pille_D2_avant_move_E2;
     var taille_pille_D2_apres_move_E2;
@@ -381,7 +385,7 @@ LyngkTestCase1.prototype.testHistoire20=function() {
 
 LyngkTestCase1.prototype.testHistoire21=function() {
     var engine=new Lyngk.Engine();
-    engine.startGame();
+    engine.startWhiteGame();
 
     var A3=new Lyngk.Coordinates('A',3);
     var B3=new Lyngk.Coordinates('B',3);
@@ -401,7 +405,7 @@ LyngkTestCase1.prototype.testHistoire21=function() {
 
 LyngkTestCase1.prototype.testHistoire22=function() {
     var engine=new Lyngk.Engine();
-    engine.startGame();
+    engine.startWhiteGame();
 
     var I7=new Lyngk.Coordinates('I',7);
     var H6=new Lyngk.Coordinates('H',6);
@@ -427,7 +431,8 @@ LyngkTestCase1.prototype.testHistoire22=function() {
       etatG6_avant_G6toH6 === etatG6_apres_G6toH6
     );
 };
-LyngkTestCase1.prototype.testHistoire22=function() {
+
+LyngkTestCase1.prototype.testHistoire23=function() {
     var engine=new Lyngk.Engine();
     engine.startVoidGame();
 

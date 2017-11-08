@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.js" afterPath="$PROJECT_DIR$/src/Engine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="428" column="49" lean-forward="false" selection-start-line="428" selection-start-column="49" selection-end-line="428" selection-end-column="49" />
+            <state relative-caret-position="381">
+              <caret line="470" column="58" lean-forward="false" selection-start-line="470" selection-start-column="58" selection-end-line="470" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -60,8 +61,8 @@
       <file leaf-file-name="Engine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="414">
+              <caret line="143" column="64" lean-forward="false" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -278,21 +279,9 @@
       <workItem from="1508143946957" duration="10740000" />
       <workItem from="1509024906802" duration="1474000" />
       <workItem from="1509026392990" duration="8374000" />
-      <workItem from="1510056162208" duration="6716000" />
-    </task>
-    <task id="LOCAL-00001" summary="2.1 test avec c=A et l=1">
-      <created>1506940951224</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1506940951224</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Histoire 1 commit code">
-      <created>1506942122908</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1506942122908</updated>
+      <workItem from="1510056162208" duration="7333000" />
+      <workItem from="1510133405339" duration="733000" />
+      <workItem from="1510134156889" duration="4492000" />
     </task>
     <task id="LOCAL-00003" summary="Histoire 1 commit code">
       <created>1506942171194</created>
@@ -609,43 +598,71 @@
       <option name="project" value="LOCAL" />
       <updated>1510062125017</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Histoire 22 test fail">
+      <created>1510062894589</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1510062894589</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Histoire 22 test success">
+      <created>1510063346410</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1510063346410</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Histoire 23 test fail , j'ai besoin de créer un nouveau start game qui initialiserai une partie avec toutes les intersections vides">
+      <created>1510135768817</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1510135768817</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Histoire 23 test fail 2, nouveau start game creer , expected true but was false comme prévu">
+      <created>1510136049569</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1510136049569</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2017.11.07 at 14h 14m 30s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 45m 45s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 17m 27s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 47m 06s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 17m 43s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 47m 28s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 18m 58s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 48m 41s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 19m 19s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 49m 20s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 26m 59s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 49m 59s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 38m 29s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 50m 10s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 40m 49s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 51m 35s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 41m 34s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 53m 37s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="Tests - 2017.11.07 at 14h 54m 36s.xml">
+    <history-entry file="Tests - 2017.11.08 at 11h 57m 21s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70497000" />
+    <option name="totallyTimeSpent" value="76339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="992" y="24" width="928" height="1056" extended-state="4" />
@@ -653,10 +670,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.036637932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32526317" sideWeight="0.16702586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526317" sideWeight="0.83297414" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -702,9 +719,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histoire 8 test success update" />
-    <MESSAGE value="Histoire 9 test fail" />
-    <MESSAGE value="Histoire 9 test success" />
     <MESSAGE value="Histoire 10 test fail" />
     <MESSAGE value="Histoire 10 test success" />
     <MESSAGE value="Histoire 12 test success" />
@@ -725,19 +739,15 @@
     <MESSAGE value="Histoire 20 test fail" />
     <MESSAGE value="Histoire 20 test success" />
     <MESSAGE value="Histoire 21 test fail" />
-    <MESSAGE value="Histoire 22 test success" />
     <MESSAGE value="Histoire 21 test success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histoire 21 test success" />
+    <MESSAGE value="Histoire 22 test fail" />
+    <MESSAGE value="Histoire 22 test success" />
+    <MESSAGE value="Histoire 23 test fail , j'ai besoin de créer un nouveau start game qui initialiserai une partie avec toutes les intersections vides" />
+    <MESSAGE value="Histoire 23 test fail 2, nouveau start game creer , expected true but was false comme prévu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire 23 test fail 2, nouveau start game creer , expected true but was false comme prévu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Engine.js</url>
-          <line>24</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -839,15 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="1018" column="0" lean-forward="false" selection-start-line="1018" selection-start-column="0" selection-end-line="1018" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Piece.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,6 +864,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Piece.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -885,16 +894,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="414">
+          <caret line="143" column="64" lean-forward="false" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="428" column="49" lean-forward="false" selection-start-line="428" selection-start-column="49" selection-end-line="428" selection-end-column="49" />
+        <state relative-caret-position="381">
+          <caret line="470" column="58" lean-forward="false" selection-start-line="470" selection-start-column="58" selection-end-line="470" selection-end-column="58" />
           <folding />
         </state>
       </provider>

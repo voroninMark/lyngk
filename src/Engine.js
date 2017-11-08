@@ -25,6 +25,21 @@ Lyngk.Engine = function () {
         cible.addPiece(pieceDuHaut);
         origine.supprTopPiece();
     };
+    this.colorCheck = function(origine,cible){
+        var length_cible=cible.getListePiece().length;
+        var length_origine=origine.getListePiece().length;
+
+        for(var i = 0;i<length_cible;i++) {
+            for(var j = 0;j<length_origine;j++){
+                if (origine.getListePiece()[j].getCouleur() === cible.getListePiece()[i].getCouleur() ) {
+                    if(origine.getListePiece()[j].getCouleur() !== 5) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    };
     this.moveOk = function(origine,cible){
         var coor1=origine.getCoor();
         var coor2=cible.getCoor();
@@ -32,8 +47,10 @@ Lyngk.Engine = function () {
         var l2=coor2.getLigne();
         var c1=coor1.getColonne().charCodeAt(0);
         var c2=coor2.getColonne().charCodeAt(0);
-        if((origine.getListePiece().length < cible.getListePiece().length) ||
-            (origine.getListePiece().length + cible.getListePiece().length >5)){
+        if( !this.colorCheck(origine,cible) ||
+            (origine.getListePiece().length < cible.getListePiece().length) ||
+            (origine.getListePiece().length + cible.getListePiece().length >5)
+        ){
             return false;
         }
         if(origine.getEtat() !== 3 && cible.getEtat() !== 0) {
@@ -104,6 +121,18 @@ Lyngk.Engine = function () {
         if(this.moveOk(origine,cible)) {
             this.poserPile(origine,cible);
             origine.cleanPile();
+        }
+    };
+    this.startWhiteGame=function(){
+        var lettres='ABCDEFGHI';
+        for(var i=1;i<=9;i++){
+            for(var j=1;j<=9;j++){
+                var coor=new Lyngk.Coordinates(lettres[i-1],j);
+                if(coor.isOk()){
+                    tabInter.push(new Lyngk.Intersection(coor));
+                    this.poser(tabInter[tabInter.length - 1], new Lyngk.Piece('WHITE'));
+                }
+            }
         }
     };
     this.startVoidGame=function(){
