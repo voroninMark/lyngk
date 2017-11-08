@@ -301,7 +301,7 @@ LyngkTestCase1.prototype.testHistoire18=function() {
 
 LyngkTestCase1.prototype.testHistoire19=function() {
     var engine=new Lyngk.Engine();
-    engine.startGame();
+    engine.startWhiteGame();
 
     var H5=new Lyngk.Coordinates('H',5);
     var I7=new Lyngk.Coordinates('I',7);
@@ -471,4 +471,12 @@ LyngkTestCase1.prototype.testHistoire23=function() {
     length_G6_apres_G6toG7=interG6.getListePiece().length;
 
     assertTrue(length_G5 === 3 && length_G6_avant_G6toG7 === length_G6_apres_G6toG7);
+};
+
+LyngkTestCase1.prototype.testHistoire24=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie();
+
+   assertTrue(partie.getTour() === 1 && partie.getJoueurCourant().getNum() === 1);
+
 };
