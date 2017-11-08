@@ -562,8 +562,21 @@ LyngkTestCase1.prototype.testHistoire28=function() {
 LyngkTestCase1.prototype.testHistoire29=function() {
     var partie = new Lyngk.Partie();
     partie.startPartie('normal');
-    var engine=partie.getEngine();
-    console.log(partie.nbCoupsDispo());
     assertTrue(partie.nbCoupsDispo() === 40);
+};
+LyngkTestCase1.prototype.testHistoire30=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie('normal');
+    var engine=partie.getEngine();
+
+    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
+    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('GREEN'));
+    engine.interFromCoor(engine.coorFromString('B3')).cleanPile();
+    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('BLACK'));
+
+    partie.getJoueurCourant().reclamer('BLACK');
+    partie.jouer('A3','B3');
+
+    assertTrue(partie.nbCoupsDispo() === 32);
 };
 

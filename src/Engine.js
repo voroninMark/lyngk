@@ -187,21 +187,24 @@ Lyngk.Engine = function () {
     this.calcCoups = function(couleurs){
         var coups=0;
         var check=1;
-        for(var i = 0; i<tabInter.length;i++){
-            if(tabInter[i].getCouleur() === 'WHITE'){
-                check=0;
-            }else{
-                for(var j = 0;j<couleurs.length;j++){
-                    if(tabInter[i].getCouleur() === couleurs[j]){
-                        check=0;
-                        break;
+
+        for(var i = 0; i<tabInter.length;i++) {
+            if (tabInter[i].getListePiece().length >0) {
+                if (tabInter[i].getCouleur() === 'WHITE') {
+                    check = 0;
+                } else {
+                    for (var j = 0; j < couleurs.length; j++) {
+                        if (tabInter[i].getCouleur() === couleurs[j]) {
+                            check = 0;
+                            break;
+                        }
                     }
                 }
+                if (check === 1) {
+                    coups++;
+                }
+                check = 1;
             }
-            if(check===1){
-                coups++;
-            }
-            check=1;
         }
         return coups;
     };

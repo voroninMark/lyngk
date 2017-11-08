@@ -21,7 +21,7 @@ Lyngk.Partie = function () {
         tour=1;
     };
     this.nbCoupsDispo = function(){
-        var couleurs=this.getJoueurCourant().getCouleurs();
+        var couleurs=this.getAdversaire().getCouleurs();
         return engine.calcCoups(couleurs);
     };
     this.jouer = function (s_origine,s_cible) {
