@@ -1,7 +1,7 @@
 'use strict';
 
 var LyngkTestCase1 = TestCase("LyngkTestCase");
-/*
+
 LyngkTestCase1.prototype.testA=function(){
     var cpt=0;
     var lettres='ABCDEFGHI';
@@ -608,7 +608,7 @@ LyngkTestCase1.prototype.testHistoire31=function() {
     // on fait les test sur un plateau blancs avec seulement 4 pieces non blanches pour poivoir avoir des resultat de test conctants ( le plateau de jeu est généré aléatoiremnt normalement
 
 };
-*/
+
 LyngkTestCase1.prototype.testHistoire32=function() {
     var partie = new Lyngk.Partie();
     var win;
@@ -629,4 +629,5 @@ LyngkTestCase1.prototype.testHistoire32=function() {
         console.log('Score vainqueur :: ' + win.getPoints());
         console.log('Score perdant :: ' + lose.getPoints());
     }
+    assertTrue
 };

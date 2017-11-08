@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
+    <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="Histoire 32 success, je ne sais pas vraiment quoi vérifier avec l'assert mais la partie se termine bien selon les conditions de l'histoire 32 si l'ordinateur joue aléatoirement par lui même">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.js" afterPath="$PROJECT_DIR$/src/Engine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/joueur.js" afterPath="$PROJECT_DIR$/test/joueur.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/partie.js" afterPath="$PROJECT_DIR$/test/partie.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="629" column="46" lean-forward="false" selection-start-line="629" selection-start-column="46" selection-end-line="629" selection-end-column="46" />
+            <state relative-caret-position="589">
+              <caret line="633" column="0" lean-forward="true" selection-start-line="633" selection-start-column="0" selection-end-line="633" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -33,7 +30,7 @@
       <file leaf-file-name="joueur.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/joueur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="306">
               <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding />
             </state>
@@ -43,7 +40,7 @@
       <file leaf-file-name="partie.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/partie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="3132">
               <caret line="174" column="26" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
               <folding />
             </state>
@@ -73,7 +70,7 @@
       <file leaf-file-name="Engine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
+            <state relative-caret-position="4284">
               <caret line="238" column="42" lean-forward="false" selection-start-line="238" selection-start-column="42" selection-end-line="238" selection-end-column="42" />
               <folding />
             </state>
@@ -174,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JsTestDriver.LyngkTestCase.testHistoire32">
+  <component name="RunManager" selected="JsTestDriver.Tests">
     <configuration name="LyngkTestCase.testHistoire32" type="JsTestDriver-test-runner" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_METHOD" />
       <setting name="configType" value="FILE_PATH" />
@@ -335,14 +332,8 @@
       <workItem from="1510169039995" duration="51000" />
       <workItem from="1510169104949" duration="2014000" />
       <workItem from="1510171134539" duration="1242000" />
-      <workItem from="1510172389865" duration="712000" />
-    </task>
-    <task id="LOCAL-00020" summary="Histoire 7 test fail">
-      <created>1507542422750</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1507542422750</updated>
+      <workItem from="1510172389865" duration="815000" />
+      <workItem from="1510173216077" duration="181000" />
     </task>
     <task id="LOCAL-00021" summary="Histoire 7 test fail">
       <created>1507544084751</created>
@@ -680,43 +671,50 @@
       <option name="project" value="LOCAL" />
       <updated>1510156964681</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Histoire 32 success, je ne sais pas vraiment quoi vérifier avec l'assert mais la partie se termine bien selon les conditions de l'histoire 32 si l'ordinateur joue aléatoirement par lui même">
+      <created>1510173167475</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1510173167476</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 22m 02s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 33m 07s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 23m 09s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 33m 11s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 28m 38s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 33m 42s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 28m 49s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 33m 43s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 29m 33s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 34m 10s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 21s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 34m 47s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 28s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 35m 57s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 31s.xml">
+    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 36m 07s.xml">
       <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 34s.xml">
-      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="Tests - 2017.11.08 at 21h 36m 22s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
-    <history-entry file="LyngkTestCase_testHistoire32 - 2017.11.08 at 21h 31m 36s.xml">
-      <configuration name="LyngkTestCase.testHistoire32" configurationId="JsTestDriver-test-runner" />
+    <history-entry file="Tests - 2017.11.08 at 21h 36m 32s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109950000" />
+    <option name="totallyTimeSpent" value="110234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="581" y="30" width="1857" height="1092" extended-state="6" />
@@ -799,7 +797,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Histoire 19 test success" />
     <MESSAGE value="Histoire 20 test fail" />
     <MESSAGE value="Histoire 20 test success" />
     <MESSAGE value="Histoire 21 test fail" />
@@ -824,7 +821,8 @@
     <MESSAGE value="Histoire 29 test success" />
     <MESSAGE value="Histoire 30 test success" />
     <MESSAGE value="Histoire 31 test success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histoire 31 test success" />
+    <MESSAGE value="Histoire 32 success, je ne sais pas vraiment quoi vérifier avec l'assert mais la partie se termine bien selon les conditions de l'histoire 32 si l'ordinateur joue aléatoirement par lui même" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire 32 success, je ne sais pas vraiment quoi vérifier avec l'assert mais la partie se termine bien selon les conditions de l'histoire 32 si l'ordinateur joue aléatoirement par lui même" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -963,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/partie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="3132">
           <caret line="174" column="26" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
           <folding />
         </state>
@@ -971,7 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
+        <state relative-caret-position="4284">
           <caret line="238" column="42" lean-forward="false" selection-start-line="238" selection-start-column="42" selection-end-line="238" selection-end-column="42" />
           <folding />
         </state>
@@ -979,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/joueur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="306">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
@@ -987,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="629" column="46" lean-forward="false" selection-start-line="629" selection-start-column="46" selection-end-line="629" selection-end-column="46" />
+        <state relative-caret-position="589">
+          <caret line="633" column="0" lean-forward="true" selection-start-line="633" selection-start-column="0" selection-end-line="633" selection-end-column="0" />
           <folding />
         </state>
       </provider>
