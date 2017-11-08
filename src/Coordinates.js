@@ -16,7 +16,7 @@ Lyngk.Coordinates = function (c, l) {
                 "H" : [5, 8],
                 "I" : [7, 7]
             };
-        if(l>=tabOk[c][0] && l<=tabOk[c][1]){
+        if(tabOk[c] !== undefined && l>=tabOk[c][0] && l<=tabOk[c][1]){
             return true;
         }
         return false;

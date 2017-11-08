@@ -562,21 +562,49 @@ LyngkTestCase1.prototype.testHistoire28=function() {
 LyngkTestCase1.prototype.testHistoire29=function() {
     var partie = new Lyngk.Partie();
     partie.startPartie('normal');
-    assertTrue(partie.nbCoupsDispo() === 40);
+    assertTrue(partie.interValides(partie.getJoueurCourant()) === 40);
 };
 LyngkTestCase1.prototype.testHistoire30=function() {
     var partie = new Lyngk.Partie();
-    partie.startPartie('normal');
+    partie.startPartie('white');
     var engine=partie.getEngine();
 
     engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('GREEN'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('BLACK'));
     engine.interFromCoor(engine.coorFromString('B3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('BLACK'));
+    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('GREEN'));
+
 
     partie.getJoueurCourant().reclamer('BLACK');
+
     partie.jouer('A3','B3');
 
-    assertTrue(partie.nbCoupsDispo() === 32);
-};
+    var interValides_j1=partie.interValides(partie.getJoueur(1));
+    var interValides_j2=partie.interValides(partie.getJoueur(2));
 
+    assertTrue(interValides_j1 === 1 && interValides_j2 === 0);
+    // seul le joueur 1 a encore un coup car le plateau est remplis de pieces blanches sauf une intersection sur laquelle une pille est noire, et le joueur 1 à reclamé la couleur noire
+};
+LyngkTestCase1.prototype.testHistoire31=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie('white');
+    var engine=partie.getEngine();
+    var interA3=engine.interFromCoor(engine.coorFromString('A3'));
+    engine.poser(interA3,new Lyngk.Piece('BLACK'));
+    var interB3=engine.interFromCoor(engine.coorFromString('B3'));
+    engine.poser(interB3,new Lyngk.Piece('RED'));
+    var interX1=engine.interFromCoor(engine.coorFromString('X1'));
+    engine.poser(interX1,new Lyngk.Piece('BLUE'));
+    var interE3=engine.interFromCoor(engine.coorFromString('E3'));
+    engine.poser(interE3,new Lyngk.Piece('IVORY'));
+
+
+    var coupsA3=partie.coupsPossibles(interA3);
+    var coupsB3=partie.coupsPossibles(interB3);
+    var coupsX1=partie.coupsPossibles(interX1);
+    var coupsE3=partie.coupsPossibles(interE3);
+
+    assertTrue(coupsA3 === 2 && coupsB3 === 5 && coupsX1 === 0 && coupsE3 === 6);
+    // on fait les test sur un plateau blancs avec seulement 4 pieces non blanches pour poivoir avoir des resultat de test conctants ( le plateau de jeu est généré aléatoiremnt normalement
+
+};

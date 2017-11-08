@@ -20,14 +20,41 @@ Lyngk.Partie = function () {
         }
         tour=1;
     };
-    this.nbCoupsDispo = function(){
-        var couleurs=this.getAdversaire().getCouleurs();
-        return engine.calcCoups(couleurs);
+    this.interValides = function(joueur){
+        var couleurs=this.getAdversaire(joueur).getCouleurs();
+        return engine.calcInterValides(couleurs);
+    };
+    this.coupsPossibles = function (origine) {
+        var coor=origine.getCoor();
+        var l=coor.getLigne();
+        var c=coor.getColonne().charCodeAt(0);
+        var cpt = 0;
+        if(origine.getListePiece().length === 0 || (origine.getListePiece().length > 0 && origine.getCouleur() === 'WHITE')){return cpt;}
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c),l+1)))) cpt++;
+
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c),l-1)))) cpt++;
+
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c+1),l)))) cpt++;
+
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c-1),l)))) cpt++;
+
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c+1),l+1)))) cpt++;
+
+        if(engine.moveOk(origine,engine.interFromCoor(new Lyngk.Coordinates(String.fromCharCode(c-1),l-1)))) cpt++;
+
+        return cpt;
+    };
+    this.coupsPossiblesTot = function () {
+        var cpt=0;
+        for(var i = 0;i<engine.getTabInter().length;i++){
+            cpt+=this.coupsPossibles(engine.getTabInter()[i]);
+        }
+        return cpt;
     };
     this.jouer = function (s_origine,s_cible) {
         var origine=engine.coorFromString(s_origine);
         var cible=engine.coorFromString(s_cible);
-        if(!this.getAdversaire().couleurIn(engine.interFromCoor(origine).getCouleur())){
+        if(!this.getAdversaire(this.getJoueurCourant()).couleurIn(engine.interFromCoor(origine).getCouleur())){
             engine.movePile(origine, cible);
         }
         if( engine.interFromCoor(cible).getEtat() === 3 &&
@@ -50,7 +77,7 @@ Lyngk.Partie = function () {
     this.getEngine = function () {
         return engine;
     };
-    this.getAdversaire = function(){
-        return joueurs[(tour)%2];
+    this.getAdversaire = function(joueur){
+        return joueurs[(joueur.getNum())%2];
     }
 };

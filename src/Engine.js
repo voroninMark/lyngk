@@ -49,7 +49,8 @@ Lyngk.Engine = function () {
         var c2=coor2.getColonne().charCodeAt(0);
         if( !this.colorCheck(origine,cible) ||
             (origine.getListePiece().length < cible.getListePiece().length) ||
-            (origine.getListePiece().length + cible.getListePiece().length >5)
+            (origine.getListePiece().length + cible.getListePiece().length >5) ||
+            !coor2.isOk() || !coor1.isOk()
         ){
             return false;
         }
@@ -119,7 +120,7 @@ Lyngk.Engine = function () {
                 return tab[i];
             }
         }
-        return null;
+        return new Lyngk.Intersection(coor);
     };
     this.movePile=function(origineCoor,cibleCoor){
         var origine=this.interFromCoor(origineCoor);
@@ -184,7 +185,7 @@ Lyngk.Engine = function () {
     this.getTabInter=function(){
         return tabInter;
     };
-    this.calcCoups = function(couleurs){
+    this.calcInterValides = function(couleurs){
         var coups=0;
         var check=1;
 
