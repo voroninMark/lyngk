@@ -551,6 +551,7 @@ LyngkTestCase1.prototype.testHistoire27=function() {
     engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
     engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('RED'));
 
+    partie.getJoueurCourant().reclamer('RED');
     partie.jouer('A3','B3');
     partie.jouer('B3','B4');
 

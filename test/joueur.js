@@ -15,12 +15,21 @@ Lyngk.Joueur = function (n) {
         points++;
     };
     this.reclamer = function (c) {
-        couleurs.push(Lyngk.Color[c]);
+        couleurs.push(c);
     };
     this.couleurIn = function (c) {
-        if(couleurs.find(elem => elem === Lyngk.Color[c]) !== undefined){
-            return true;
+        for(var i=0;i<couleurs.length;i++){
+            if(couleurs[i] === c){
+                return true;
+            }
         }
         return false;
+    };
+    this.couleurToString = function () {
+        var res="->";
+        for(var i=0;i<couleurs.length;i++){
+            res+=couleurs[i]+"/";
+        }
+        return res;
     };
 };
