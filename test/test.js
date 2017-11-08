@@ -480,3 +480,22 @@ LyngkTestCase1.prototype.testHistoire24=function() {
    assertTrue(partie.getTour() === 1 && partie.getJoueurCourant().getNum() === 1);
 
 };
+
+LyngkTestCase1.prototype.testHistoire25=function() {
+    var partie = new Lyngk.Partie();
+    partie.startPartie();
+
+    var A3=new Lyngk.Coordinates('A',3);
+    var B3=new Lyngk.Coordinates('B',3);
+
+    var j_avant_move;
+    var j_apres_move;
+
+    j_avant_move = partie.getJoueurCourant().getNum();
+    partie.jouer(A3,B3);
+    j_apres_move = partie.getJoueurCourant().getNum();
+
+    assertTrue(j_avant_move === 1 && j_apres_move === 2);
+
+
+};
