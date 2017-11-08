@@ -543,7 +543,7 @@ LyngkTestCase1.prototype.testHistoire27=function() {
     assertTrue(pt_j1_avant === 0 && pt_j1_apres === 1 && nbPieces === 38);
 
 };
-LyngkTestCase1.prototype.testHistoire27=function() {
+LyngkTestCase1.prototype.testHistoire28=function() {
     var partie = new Lyngk.Partie();
     partie.startPartie('white');
     var engine=partie.getEngine();
