@@ -3,35 +3,35 @@
 Lyngk.State = {VACANT: 0, ONE_PIECE: 1, STACK: 2, FULL_STACK: 3};
 
 Lyngk.Intersection = function (c) {
-    var coor=c;
-    var etat=Lyngk.State.VACANT;
-    var listePiece=[];
-    this.getEtat=function(){
-        return etat;
+    var coordinates = c;
+    var state = Lyngk.State.VACANT;
+    var listPieces = [];
+    this.getState = function () {
+        return state;
     };
-    this.setEtat=function(newEtat){
-        etat=Lyngk.State[newEtat];
+    this.setState = function (newState) {
+        state = Lyngk.State[newState];
     };
-    this.getListePiece=function(){
-        return listePiece;
+    this.getListPieces = function () {
+        return listPieces;
     };
-    this.addPiece=function(newPiece){
-        listePiece.push(newPiece);
+    this.addPiece = function (newPiece) {
+        listPieces.push(newPiece);
     };
-    this.setListePiece=function(newListe){
-        listePiece=newListe;
+    this.setListPieces = function (newList) {
+        listPieces = newList;
     };
-    this.getCouleur=function(){
-        return listePiece[listePiece.length - 1].getCouleur();
+    this.getColor = function () {
+        return listPieces[listPieces.length - 1].getColor();
     };
-    this.supprTopPiece=function(){
-        listePiece.pop();
+    this.removeTopPiece = function () {
+        listPieces.pop();
     };
-    this.cleanPile=function(){
-        listePiece=[];
-        this.setEtat('VACANT');
+    this.cleanPile = function () {
+        listPieces = [];
+        this.setState('VACANT');
     };
-    this.getCoor = function(){
-        return coor;
-    }
+    this.getCoordinates = function () {
+        return coordinates;
+    };
 };

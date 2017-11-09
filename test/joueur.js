@@ -1,8 +1,8 @@
 "use strict";
 
-Lyngk.Joueur = function (n) {
+Lyngk.Player = function (n) {
     var num=n;
-    var couleurs=[];
+    var colors=[];
     var points=0;
 
     this.getNum = function () {
@@ -11,31 +11,31 @@ Lyngk.Joueur = function (n) {
     this.getPoints = function () {
         return points;
     };
-    this.getCouleurs = function(){
-        return couleurs;
-    }
+    this.getColors = function(){
+        return colors;
+    };
     this.setPoint = function(n){
         points=n;
     };
     this.addPoint = function(){
         points++;
     };
-    this.reclamer = function (c) {
-        couleurs.push(c);
+    this.claim = function (c) {
+        colors.push(c);
     };
-    this.couleurIn = function (c) {
-        for(var i=0;i<couleurs.length;i++){
-            if(couleurs[i] === c){
+    this.colorIn = function (c) {
+        for(var i=0;i<colors.length;i++){
+            if(colors[i] === c){
                 return true;
             }
         }
         return false;
     };
-    this.couleurToString = function () {
-        var res="->";
-        for(var i=0;i<couleurs.length;i++){
-            res+=couleurs[i]+"/";
+    this.colorsToString = function () {
+        var result="->";
+        for(var i=0;i<colors.length;i++){
+            result+=colors[i]+"/";
         }
-        return res;
+        return result;
     };
 };

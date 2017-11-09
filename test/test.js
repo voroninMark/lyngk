@@ -30,14 +30,14 @@ LyngkTestCase1.prototype.testC=function() {
     var l=12;
     var s=c+l;
     var c=new Lyngk.Coordinates(c,l);
-    assertTrue(c.toString() === 'invalide');
+    assertTrue(c.toString() === 'invalid');
 };
 
 LyngkTestCase1.prototype.testD=function() {
     var c1=new Lyngk.Coordinates('B',3);
     var c2=c1.clone();
 
-    assertTrue((c1.getLigne() === c2.getLigne()) && (c1.getColonne() === c2.getColonne()));
+    assertTrue((c1.getLine() === c2.getLine()) && (c1.getColumn() === c2.getColumn()));
 };
 
 LyngkTestCase1.prototype.testE=function() {
@@ -54,10 +54,10 @@ LyngkTestCase1.prototype.testE=function() {
                 for (var k = 0; k < 9; k++) {
                     for (var l = 0; l < 9; l++) {
                         var cTest = new Lyngk.Coordinates(lettres[i], j + 1);
-                        if(cTest.hashage()===c.hashage()
-                            && cTest.getColonne()!==c.getColonne()
-                            && cTest.getLigne()!==c.getLigne()
-                        ){// si la condition est vraie au moins une fois ; le hashage
+                        if(cTest.do_hash()===c.do_hash()
+                            && cTest.getColumn()!==c.getColumn()
+                            && cTest.getLine()!==c.getLine()
+                        ){// si la condition est vraie au moins une fois ; le do_hash
                             // n'est pas bon
                             res++;
                         }
@@ -77,7 +77,7 @@ LyngkTestCase1.prototype.testF=function() {
             var c=new Lyngk.Coordinates(lettres[i-1],j);
             if(c.isOk()){
                 var intersect=new Lyngk.Intersection(c);
-                if(intersect.getEtat()!==0){// toutes les intersections douvent avoir
+                if(intersect.getState()!==0){// toutes les intersections douvent avoir
                                             // etat = 0 (vacant) par défaut
                     cpt++;
                 }
@@ -93,7 +93,7 @@ LyngkTestCase1.prototype.testG=function() {
     var inter=new Lyngk.Intersection(coor);
     var piece=new Lyngk.Piece('BLUE');
     engine.poser(inter,piece);
-    assertTrue(inter.getEtat()===1);
+    assertTrue(inter.getState()===1);
 };
 
 LyngkTestCase1.prototype.testH=function() {
@@ -104,7 +104,7 @@ LyngkTestCase1.prototype.testH=function() {
     var pieceRed=new Lyngk.Piece('RED');
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceRed);
-    assertTrue(inter.getEtat()===2);
+    assertTrue(inter.getState()===2);
 };
 LyngkTestCase1.prototype.testI=function() {
     var engine=new Lyngk.Engine();
@@ -117,7 +117,7 @@ LyngkTestCase1.prototype.testI=function() {
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceBlue);
     engine.poser(inter,pieceRed);
-    assertTrue(inter.getEtat()===3);
+    assertTrue(inter.getState()===3);
 };
 
 LyngkTestCase1.prototype.testHistoire11=function() {
@@ -138,7 +138,7 @@ LyngkTestCase1.prototype.testHistoire11=function() {
         }
     }
     tabInter.forEach(function(elem){
-       if(elem.getEtat()!==1){
+       if(elem.getState()!==1){
            cpt++;
        }
     });
@@ -157,23 +157,23 @@ LyngkTestCase1.prototype.testHistoire12=function() {
     var cptIvory=0;
 
     listeInter.forEach(function(elem){
-        elem.getListePiece().forEach(function(piece){
-            if(Lyngk.Color[piece.getCouleur()]===0){
+        elem.getListPieces().forEach(function(piece){
+            if(Lyngk.Color[piece.getColor()]===0){
                 cptBlack++;
             }
-            if(Lyngk.Color[piece.getCouleur()]===1){
+            if(Lyngk.Color[piece.getColor()]===1){
                 cptIvory++;
             }
-            if(Lyngk.Color[piece.getCouleur()]===2){
+            if(Lyngk.Color[piece.getColor()]===2){
                 cptBlue++;
             }
-            if(Lyngk.Color[piece.getCouleur()]===3){
+            if(Lyngk.Color[piece.getColor()]===3){
                 cptRed++;
             }
-            if(Lyngk.Color[piece.getCouleur()]===4){
+            if(Lyngk.Color[piece.getColor()]===4){
                 cptGreen++;
             }
-            if(Lyngk.Color[piece.getCouleur()]===5){
+            if(Lyngk.Color[piece.getColor()]===5){
                 cptWhite++;
             }
         });
@@ -188,7 +188,7 @@ LyngkTestCase1.prototype.testHistoire13=function() {
     var cptTest=0;
 
     listeInter.forEach(function(elem){
-        var tempLength=elem.getListePiece().length;
+        var tempLength=elem.getListPieces().length;
         if(tempLength!==1){
             cptTest++;
         }
@@ -202,9 +202,9 @@ LyngkTestCase1.prototype.testHistoire14=function() {
     var listeInter=engine.getTabInter();
 
     var rand=Math.floor(Math.random()*43);
-    var listePiece=listeInter[rand].getListePiece();
-    var couleurIntersection=listeInter[rand].getCouleur();
-    var couleurDernierePiece=listePiece[listePiece.length-1].getCouleur();
+    var listePiece=listeInter[rand].getListPieces();
+    var couleurIntersection=listeInter[rand].getColor();
+    var couleurDernierePiece=listePiece[listePiece.length-1].getColor();
 
     assertTrue(couleurIntersection===couleurDernierePiece);
 };
@@ -220,12 +220,12 @@ LyngkTestCase1.prototype.testHistoire15=function() {
 
     engine.poser(inter1,new Lyngk.Piece('WHITE'));
     engine.poser(inter2,new Lyngk.Piece('BLACK'));
-    var couleurInter1=inter1.getCouleur();
+    var couleurInter1=inter1.getColor();
 
     engine.movePiece(inter1,inter2);
 
-    var couleurInter2=inter2.getCouleur();
-    assertTrue(couleurInter1===couleurInter2 && inter1.getListePiece().length === 0);
+    var couleurInter2=inter2.getColor();
+    assertTrue(couleurInter1===couleurInter2 && inter1.getListPieces().length === 0);
 
 };
 
@@ -235,19 +235,19 @@ LyngkTestCase1.prototype.testHistoire16=function() {
     var B3=new Lyngk.Coordinates('B',3);
     var B2=new Lyngk.Coordinates('B',2);
     engine.startWhiteGame();
-    var interB2=engine.interFromCoor(B2);
-    var interB3=engine.interFromCoor(B3);
+    var interB2=engine.intersectionFromCoordinates(B2);
+    var interB3=engine.intersectionFromCoordinates(B3);
 
     // on pose 2 pieces supplémentaires pour respecter l'histoire
     engine.poser(interB2,new Lyngk.Piece('WHITE'));
     engine.poser(interB2,new Lyngk.Piece('BLACK'));
 
-    var couleurB2=Lyngk.Color[interB2.getCouleur()];
+    var couleurB2=Lyngk.Color[interB2.getColor()];
 
     engine.movePile(B2,B3);
 
-    var couleurB3=Lyngk.Color[interB3.getCouleur()];
-    assertTrue(couleurB2===couleurB3 && interB2.getListePiece().length === 0 && interB3.getListePiece().length === 4);
+    var couleurB3=Lyngk.Color[interB3.getColor()];
+    assertTrue(couleurB2===couleurB3 && interB2.getListPieces().length === 0 && interB3.getListPieces().length === 4);
 };
 
 LyngkTestCase1.prototype.testHistoire17=function() {
@@ -256,16 +256,16 @@ LyngkTestCase1.prototype.testHistoire17=function() {
     var B3=new Lyngk.Coordinates('B',3);
     var B2=new Lyngk.Coordinates('B',2);
     engine.startWhiteGame();
-    var interB2=engine.interFromCoor(B2);
-    var interB3=engine.interFromCoor(B3);
+    var interB2=engine.intersectionFromCoordinates(B2);
+    var interB3=engine.intersectionFromCoordinates(B3);
 
-    var etatB2PremierMoveAvant = interB2.getEtat();
+    var etatB2PremierMoveAvant = interB2.getState();
     engine.movePile(B2,B3);
-    var etatB2PremierMoveApres = interB2.getEtat();
+    var etatB2PremierMoveApres = interB2.getState();
 
-    var etatB3DeuxiemeMoveAvant = interB3.getEtat();
+    var etatB3DeuxiemeMoveAvant = interB3.getState();
     engine.movePile(B3,B2);
-    var etatB3DeuxiemeMoveApres = interB3.getEtat();
+    var etatB3DeuxiemeMoveApres = interB3.getState();
 
     assertTrue(
         etatB2PremierMoveAvant !== etatB2PremierMoveApres &&
@@ -280,18 +280,18 @@ LyngkTestCase1.prototype.testHistoire18=function() {
     var B2=new Lyngk.Coordinates('B',2);
     var C2=new Lyngk.Coordinates('C',2);
 
-    var interB2=engine.interFromCoor(B2);
-    var interC2=engine.interFromCoor(C2);
+    var interB2=engine.intersectionFromCoordinates(B2);
+    var interC2=engine.intersectionFromCoordinates(C2);
 
 
 
-    var etatB2avant = interB2.getEtat();
+    var etatB2avant = interB2.getState();
     engine.movePile(B2,B3);
-    var etatB2apres = interB2.getEtat();
+    var etatB2apres = interB2.getState();
 
-    var etatC2avant = interC2.getEtat();
+    var etatC2avant = interC2.getState();
     engine.movePile(C2,B3);
-    var etatC2apres = interC2.getEtat();
+    var etatC2apres = interC2.getState();
 
     assertTrue(
         etatB2avant !== etatB2apres &&
@@ -309,9 +309,9 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     var F5=new Lyngk.Coordinates('F',5);
     var F3=new Lyngk.Coordinates('F',3);
 
-    var interH5=engine.interFromCoor(H5);
-    var interH6=engine.interFromCoor(H6);
-    var interI7=engine.interFromCoor(I7);
+    var interH5=engine.intersectionFromCoordinates(H5);
+    var interH6=engine.intersectionFromCoordinates(H6);
+    var interI7=engine.intersectionFromCoordinates(I7);
 
     var etatI7_avant_I7toH6;
     var etatI7_apres_I7toH6;
@@ -324,25 +324,25 @@ LyngkTestCase1.prototype.testHistoire19=function() {
     var etatH5_avant_H5toF3;
     var etatH5_apres_H5toF3;
 
-    etatI7_avant_I7toH6=interI7.getEtat();
+    etatI7_avant_I7toH6=interI7.getState();
     engine.movePile(I7,H6);
-    etatI7_apres_I7toH6=interI7.getEtat();
+    etatI7_apres_I7toH6=interI7.getState();
 
-    etatH6_avant_H6toH5=interH6.getEtat();
+    etatH6_avant_H6toH5=interH6.getState();
     engine.movePile(H6,H5);
-    etatH6_apres_H6toH5=interH6.getEtat();
+    etatH6_apres_H6toH5=interH6.getState();
 
-    etatH5_avant_H5toH8=interH5.getEtat();
+    etatH5_avant_H5toH8=interH5.getState();
     engine.movePile(H5,H8);
-    etatH5_apres_H5toH8=interH5.getEtat();
+    etatH5_apres_H5toH8=interH5.getState();
 
-    etatH5_avant_H5toF5=interH5.getEtat();
+    etatH5_avant_H5toF5=interH5.getState();
     engine.movePile(H5,F5);
-    etatH5_apres_H5toF5=interH5.getEtat();
+    etatH5_apres_H5toF5=interH5.getState();
 
-    etatH5_avant_H5toF3=interH5.getEtat();
+    etatH5_avant_H5toF3=interH5.getState();
     engine.movePile(H5,H8);
-    etatH5_apres_H5toF3=interH5.getEtat();
+    etatH5_apres_H5toF3=interH5.getState();
 
     assertTrue(
         etatI7_avant_I7toH6 !== etatI7_apres_I7toH6 &&
@@ -372,9 +372,9 @@ LyngkTestCase1.prototype.testHistoire20=function() {
     engine.movePile(B3,B2);
     engine.movePile(B2,C2);
     engine.movePile(C2,D2);
-    taille_pille_D2_avant_move_E2 = engine.interFromCoor(D2).getEtat();
+    taille_pille_D2_avant_move_E2 = engine.intersectionFromCoordinates(D2).getState();
     engine.movePile(D2,E2);
-    taille_pille_D2_apres_move_E2 = engine.interFromCoor(D2).getEtat();
+    taille_pille_D2_apres_move_E2 = engine.intersectionFromCoordinates(D2).getState();
 
 
     assertTrue(taille_pille_D2_avant_move_E2 === 3 &&
@@ -394,9 +394,9 @@ LyngkTestCase1.prototype.testHistoire21=function() {
     var etatC3_apres_C3toB3;
 
     engine.movePile(A3,B3);
-    etatC3_avant_C3toB3=engine.interFromCoor(C3).getEtat();
+    etatC3_avant_C3toB3=engine.intersectionFromCoordinates(C3).getState();
     engine.movePile(C3,B3);
-    etatC3_apres_C3toB3=engine.interFromCoor(C3).getEtat();
+    etatC3_apres_C3toB3=engine.intersectionFromCoordinates(C3).getState();
 
     assertTrue(etatC3_avant_C3toB3 === etatC3_apres_C3toB3);
 
@@ -420,11 +420,11 @@ LyngkTestCase1.prototype.testHistoire22=function() {
     engine.movePile(I7,H6);
     engine.movePile(G4,G5);
     engine.movePile(G5,G6);
-    etatG6_avant_G6toH6=engine.interFromCoor(G6).getListePiece().length;
-    etatH6_avant_G6toH6=engine.interFromCoor(H6).getListePiece().length;
+    etatG6_avant_G6toH6=engine.intersectionFromCoordinates(G6).getListPieces().length;
+    etatH6_avant_G6toH6=engine.intersectionFromCoordinates(H6).getListPieces().length;
     engine.movePile(H6,G6);
-    etatH6_apres_G6toH6=engine.interFromCoor(H6).getListePiece().length;
-    etatG6_apres_G6toH6=engine.interFromCoor(G6).getListePiece().length;
+    etatH6_apres_G6toH6=engine.intersectionFromCoordinates(H6).getListPieces().length;
+    etatG6_apres_G6toH6=engine.intersectionFromCoordinates(G6).getListPieces().length;
     assertTrue(
       etatH6_avant_G6toH6 === etatH6_apres_G6toH6 &&
       etatG6_avant_G6toH6 === etatG6_apres_G6toH6
@@ -445,11 +445,11 @@ LyngkTestCase1.prototype.testHistoire23=function() {
     var white=new Lyngk.Piece('WHITE');
     var red=new Lyngk.Piece('RED');
 
-    var interG3=engine.interFromCoor(G3);
-    var interG4=engine.interFromCoor(G4);
-    var interG5=engine.interFromCoor(G5);
-    var interG6=engine.interFromCoor(G6);
-    var interG7=engine.interFromCoor(G7);
+    var interG3=engine.intersectionFromCoordinates(G3);
+    var interG4=engine.intersectionFromCoordinates(G4);
+    var interG5=engine.intersectionFromCoordinates(G5);
+    var interG6=engine.intersectionFromCoordinates(G6);
+    var interG7=engine.intersectionFromCoordinates(G7);
 
     var length_G5;
     var length_G6_avant_G6toG7;
@@ -463,34 +463,35 @@ LyngkTestCase1.prototype.testHistoire23=function() {
 
     engine.movePile(G3,G4);
     engine.movePile(G4,G5);
-    length_G5=interG5.getListePiece().length;
+    length_G5=interG5.getListPieces().length;
     engine.movePile(G5,G6);
-    length_G6_avant_G6toG7=interG6.getListePiece().length;
+    length_G6_avant_G6toG7=interG6.getListPieces().length;
     engine.movePile(G6,G7);
-    length_G6_apres_G6toG7=interG6.getListePiece().length;
+    length_G6_apres_G6toG7=interG6.getListPieces().length;
 
+    console.log(length_G5+" "+length_G6_avant_G6toG7+" "+length_G6_apres_G6toG7);
     assertTrue(length_G5 === 3 && length_G6_avant_G6toG7 === length_G6_apres_G6toG7);
 };
 
 LyngkTestCase1.prototype.testHistoire24=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie();
+    var partie = new Lyngk.Game();
+    partie.startMatch();
 
-   assertTrue(partie.getTour() === 1 && partie.getJoueurCourant().getNum() === 1);
+   assertTrue(partie.getTour() === 1 && partie.getCurrentPlayer().getNum() === 1);
 
 };
 
 LyngkTestCase1.prototype.testHistoire25=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('normal');
+    var partie = new Lyngk.Game();
+    partie.startMatch('normal');
 
 
     var j_avant_move;
     var j_apres_move;
 
-    j_avant_move = partie.getJoueurCourant().getNum();
-    partie.jouer('A3','B3');
-    j_apres_move = partie.getJoueurCourant().getNum();
+    j_avant_move = partie.getCurrentPlayer().getNum();
+    partie.play('A3','B3');
+    j_apres_move = partie.getCurrentPlayer().getNum();
 
     assertTrue(j_avant_move === 1 && j_apres_move === 2);
 
@@ -498,130 +499,130 @@ LyngkTestCase1.prototype.testHistoire25=function() {
 };
 
 LyngkTestCase1.prototype.testHistoire26=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('normal');
+    var partie = new Lyngk.Game();
+    partie.startMatch('normal');
 
     var couleur_j1;
     var couleur_j2;
 
-    partie.getJoueurCourant().reclamer('RED');
-    partie.jouer('A3','B3');
-    partie.getJoueurCourant().reclamer('BLUE');
+    partie.getCurrentPlayer().claim('RED');
+    partie.play('A3','B3');
+    partie.getCurrentPlayer().claim('BLUE');
 
 
-    assertTrue(partie.getJoueur(1).couleurIn('RED') &&
-                partie.getJoueur(2).couleurIn('BLUE')
+    assertTrue(partie.getPlayer(1).colorIn('RED') &&
+                partie.getPlayer(2).colorIn('BLUE')
     );
 };
 
 LyngkTestCase1.prototype.testHistoire27=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('white');
+    var partie = new Lyngk.Game();
+    partie.startMatch('white');
     var engine=partie.getEngine();
-    var pt_j1_avant=partie.getJoueur(1).getPoints();
+    var pt_j1_avant=partie.getPlayer(1).getPoints();
     var pt_j1_apres;
     var nbPieces;
 
-    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('BLUE'));
+    engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')).cleanPile();
+    engine.poser(engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')),new Lyngk.Piece('BLUE'));
 
 
-    partie.getJoueurCourant().reclamer('BLUE');
+    partie.getCurrentPlayer().claim('BLUE');
 
-    partie.jouer('A3','B3');
-    partie.jouer('H6','G5');
-    partie.jouer('B3','C3');
-    partie.jouer('G5','G6');
-    partie.jouer('C3','C2');
-    partie.jouer('G6','H7');
-    partie.jouer('C2','D2');
+    partie.play('A3','B3');
+    partie.play('H6','G5');
+    partie.play('B3','C3');
+    partie.play('G5','G6');
+    partie.play('C3','C2');
+    partie.play('G6','H7');
+    partie.play('C2','D2');
 
 
     nbPieces=engine.nbPieces();
-    pt_j1_apres=partie.getJoueur(1).getPoints();
+    pt_j1_apres=partie.getPlayer(1).getPoints();
 
     assertTrue(pt_j1_avant === 0 && pt_j1_apres === 1 && nbPieces === 38);
 
 };
 LyngkTestCase1.prototype.testHistoire28=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('white');
+    var partie = new Lyngk.Game();
+    partie.startMatch('white');
     var engine=partie.getEngine();
-    var interB4=engine.interFromCoor(engine.coorFromString('B4'));
-    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('RED'));
+    var interB4=engine.intersectionFromCoordinates(engine.coordinatesFromString('B4'));
+    engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')).cleanPile();
+    engine.poser(engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')),new Lyngk.Piece('RED'));
 
-    partie.getJoueurCourant().reclamer('RED');
-    partie.jouer('A3','B3');
-    partie.jouer('B3','B4');
+    partie.getCurrentPlayer().claim('RED');
+    partie.play('A3','B3');
+    partie.play('B3','B4');
 
-    assertTrue(interB4.getListePiece().length === 1);
+    assertTrue(interB4.getListPieces().length === 1);
     // la taille de B4 n'a pas changé , le deplacement B3
     //vers B4 a donc echoué
 };
 LyngkTestCase1.prototype.testHistoire29=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('normal');
-    assertTrue(partie.interValides(partie.getJoueurCourant()) === 40);
+    var partie = new Lyngk.Game();
+    partie.startMatch('normal');
+    assertTrue(partie.validIntersections(partie.getCurrentPlayer()) === 40);
 };
 LyngkTestCase1.prototype.testHistoire30=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('white');
+    var partie = new Lyngk.Game();
+    partie.startMatch('white');
     var engine=partie.getEngine();
 
-    engine.interFromCoor(engine.coorFromString('A3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('A3')),new Lyngk.Piece('BLACK'));
-    engine.interFromCoor(engine.coorFromString('B3')).cleanPile();
-    engine.poser(engine.interFromCoor(engine.coorFromString('B3')),new Lyngk.Piece('GREEN'));
+    engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')).cleanPile();
+    engine.poser(engine.intersectionFromCoordinates(engine.coordinatesFromString('A3')),new Lyngk.Piece('BLACK'));
+    engine.intersectionFromCoordinates(engine.coordinatesFromString('B3')).cleanPile();
+    engine.poser(engine.intersectionFromCoordinates(engine.coordinatesFromString('B3')),new Lyngk.Piece('GREEN'));
 
 
-    partie.getJoueurCourant().reclamer('BLACK');
+    partie.getCurrentPlayer().claim('BLACK');
 
-    partie.jouer('A3','B3');
+    partie.play('A3','B3');
 
-    var interValides_j1=partie.interValides(partie.getJoueur(1));
-    var interValides_j2=partie.interValides(partie.getJoueur(2));
+    var interValides_j1=partie.validIntersections(partie.getPlayer(1));
+    var interValides_j2=partie.validIntersections(partie.getPlayer(2));
 
     assertTrue(interValides_j1 === 1 && interValides_j2 === 0);
     // seul le joueur 1 a encore un coup car le plateau est remplis de pieces blanches sauf une intersection sur laquelle une pille est noire, et le joueur 1 à reclamé la couleur noire
 };
 LyngkTestCase1.prototype.testHistoire31=function() {
-    var partie = new Lyngk.Partie();
-    partie.startPartie('white');
+    var partie = new Lyngk.Game();
+    partie.startMatch('white');
     var engine=partie.getEngine();
-    var interA3=engine.interFromCoor(engine.coorFromString('A3'));
+    var interA3=engine.intersectionFromCoordinates(engine.coordinatesFromString('A3'));
     engine.poser(interA3,new Lyngk.Piece('BLACK'));
-    var interB3=engine.interFromCoor(engine.coorFromString('B3'));
+    var interB3=engine.intersectionFromCoordinates(engine.coordinatesFromString('B3'));
     engine.poser(interB3,new Lyngk.Piece('RED'));
-    var interX1=engine.interFromCoor(engine.coorFromString('X1'));
+    var interX1=engine.intersectionFromCoordinates(engine.coordinatesFromString('X1'));
     engine.poser(interX1,new Lyngk.Piece('BLUE'));
-    var interE3=engine.interFromCoor(engine.coorFromString('E3'));
+    var interE3=engine.intersectionFromCoordinates(engine.coordinatesFromString('E3'));
     engine.poser(interE3,new Lyngk.Piece('IVORY'));
 
 
-    var coupsA3=partie.coupsPossibles(interA3);
-    var coupsB3=partie.coupsPossibles(interB3);
-    var coupsX1=partie.coupsPossibles(interX1);
-    var coupsE3=partie.coupsPossibles(interE3);
+    var coupsA3=partie.possibleMoves(interA3);
+    var coupsB3=partie.possibleMoves(interB3);
+    var coupsX1=partie.possibleMoves(interX1);
+    var coupsE3=partie.possibleMoves(interE3);
 
     assertTrue(coupsA3 === 2 && coupsB3 === 5 && coupsX1 === 0 && coupsE3 === 6);
     // on fait les test sur un plateau blancs avec seulement 4 pieces non blanches pour poivoir avoir des resultat de test conctants ( le plateau de jeu est généré aléatoiremnt normalement
 
 };
-
+/*
 LyngkTestCase1.prototype.testHistoire32=function() {
-    var partie = new Lyngk.Partie();
+    var partie = new Lyngk.Game();
     var win;
     var lose;
 
-    partie.startPartie('normal');
+    partie.startMatch('normal');
     var engine=partie.getEngine();
-    partie.getJoueur(1).reclamer('RED');
-    partie.getJoueur(2).reclamer('BLUE');
+    partie.getPlayer(1).claim('RED');
+    partie.getPlayer(2).claim('BLUE');
     var res=partie.simulation();
-    var taillePileWin = partie.getTaillePilleWin();
-    win=partie.getVainqueur();
-    lose=partie.getPerdant();
+    var taillePileWin = partie.getSizeOfWinnerStack();
+    win=partie.getWinner();
+    lose=partie.getLoser();
     console.log(res);
     if(res==='victoire') {
         console.log('Vainquer = joueur ' + win.getNum());
@@ -629,5 +630,5 @@ LyngkTestCase1.prototype.testHistoire32=function() {
         console.log('Score vainqueur :: ' + win.getPoints());
         console.log('Score perdant :: ' + lose.getPoints());
     }
-    assertTrue
 };
+*/
